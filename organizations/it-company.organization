@@ -7,8 +7,165 @@
       <lastName>Administrarkovic</lastName>
       <title>Object</title>
       <jobTitle>Boss</jobTitle>
+      <manager></manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email>Isaonee2team+uppadmin@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr.manager">
+      <firstName>HR</firstName>
+      <lastName>Manager</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+upphrmanager@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr.member1">
+      <firstName>HR</firstName>
+      <lastName>Member 1</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+upphrmember1@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr.member2">
+      <firstName>HR</firstName>
+      <lastName>Member 2</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+upphrmember2@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="techdept.manager">
+      <firstName>TechDept</firstName>
+      <lastName>Manager</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+upptechdeptmanager@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="techdept.member1">
+      <firstName>TechDept</firstName>
+      <lastName>Member 1</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+upptechdeptmember1@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="techdept.member2">
+      <firstName>TechDept</firstName>
+      <lastName>Member 2</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+upptechdeptmember2@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="findept.manager">
+      <firstName>FinDept</firstName>
+      <lastName>Manager</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+uppfindeptmanager@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="findept.member1">
+      <firstName>FinDept</firstName>
+      <lastName>Member 1</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+uppfindeptmember1@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="findept.member2">
+      <firstName>FinDept</firstName>
+      <lastName>Member 2</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+uppfindeptmember2@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="dev.senior1">
+      <firstName>Dev</firstName>
+      <lastName>Senior 1</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+uppdevsenior1@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="dev.member1">
+      <firstName>Dev</firstName>
+      <lastName>Member 1</lastName>
+      <manager>dev.senior1</manager>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+uppdevmember1@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="dev.member2">
+      <firstName>Dev</firstName>
+      <lastName>Member 2</lastName>
+      <manager>dev.senior1</manager>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+uppdevmember2@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="dev.senior2">
+      <firstName>Dev</firstName>
+      <lastName>Senior 2</lastName>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+uppdevsenior2@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="dev.member3">
+      <firstName>Dev</firstName>
+      <lastName>Member 3</lastName>
+      <manager>dev.senior2</manager>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+uppdevmember3@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="dev.member4">
+      <firstName>Dev</firstName>
+      <lastName>Member 4</lastName>
+      <manager>dev.senior2</manager>
+      <personalData/>
+      <professionalData>
+        <email>Isaonee2team+devmember4@gmail.com</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -16,6 +173,12 @@
   <roles>
     <role name="Member">
       <displayName>Member</displayName>
+    </role>
+    <role name="Manager">
+      <displayName>Manager</displayName>
+    </role>
+    <role name="Senior">
+      <displayName>Senior</displayName>
     </role>
   </roles>
   <groups>
@@ -25,6 +188,21 @@
     <group name="Admin" parentPath="/it-company">
       <displayName>Admin</displayName>
     </group>
+    <group name="HR" parentPath="/it-company">
+      <displayName>HR</displayName>
+    </group>
+    <group name="Developer" parentPath="/it-company">
+      <displayName>Developer</displayName>
+    </group>
+    <group name="Candidate">
+      <displayName>Candidate</displayName>
+    </group>
+    <group name="TechnicalDept" parentPath="/it-company">
+      <displayName>TechnicalDept</displayName>
+    </group>
+    <group name="FinancialDept" parentPath="/it-company">
+      <displayName>FinancialDept</displayName>
+    </group>
   </groups>
   <memberships>
     <membership>
@@ -32,6 +210,171 @@
       <roleName>Member</roleName>
       <groupName>Admin</groupName>
       <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr.manager</userName>
+      <roleName>Manager</roleName>
+      <groupName>HR</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr.manager</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>hr.member1</userName>
+      <roleName>Member</roleName>
+      <groupName>HR</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr.member1</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>hr.member2</userName>
+      <roleName>Member</roleName>
+      <groupName>HR</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr.member2</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>techdept.manager</userName>
+      <roleName>Manager</roleName>
+      <groupName>TechnicalDept</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>techdept.manager</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>techdept.member1</userName>
+      <roleName>Member</roleName>
+      <groupName>TechnicalDept</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>techdept.member2</userName>
+      <roleName>Member</roleName>
+      <groupName>TechnicalDept</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>techdept.member2</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>techdept.member1</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>findept.manager</userName>
+      <roleName>Manager</roleName>
+      <groupName>FinancialDept</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>findept.manager</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>findept.member1</userName>
+      <roleName>Member</roleName>
+      <groupName>FinancialDept</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>findept.member1</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>findept.member2</userName>
+      <roleName>Member</roleName>
+      <groupName>FinancialDept</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>findept.member2</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>dev.senior1</userName>
+      <roleName>Senior</roleName>
+      <groupName>Developer</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>dev.member1</userName>
+      <roleName>Member</roleName>
+      <groupName>Developer</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>dev.member2</userName>
+      <roleName>Member</roleName>
+      <groupName>Developer</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>dev.senior2</userName>
+      <roleName>Senior</roleName>
+      <groupName>Developer</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>dev.member3</userName>
+      <roleName>Member</roleName>
+      <groupName>Developer</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>dev.member4</userName>
+      <roleName>Member</roleName>
+      <groupName>Developer</groupName>
+      <groupParentPath>/it-company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>dev.senior1</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>dev.senior2</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>dev.member1</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>dev.member2</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>dev.member3</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>dev.member4</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
     </membership>
   </memberships>
 </organization:Organization>

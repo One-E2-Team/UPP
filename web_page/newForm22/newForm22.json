@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "newForm1",
-  "name" : "newForm1",
-  "lastUpdate" : 1642114935507,
+  "id" : "newForm22",
+  "name" : "newForm22",
+  "lastUpdate" : 1642115025919,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "16997c8f-2ee5-411d-a053-ce072de59ba7",
+        "reference" : "d66421eb-bd4a-4c97-9649-d74630117399",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -20,7 +20,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "7a12a597-7a95-4d48-9711-bf67c76ce354",
+          "reference" : "e9959cbb-309e-425b-a413-579eefbaf7f5",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -95,7 +95,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "256423be-8a83-482f-b684-14fee895ad15",
+                "reference" : "910a5f0c-b132-41c4-9638-ce3f8b27f558",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -147,7 +147,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "b83794ef-6a8d-40d7-8c3e-407d04cef3d8",
+                "reference" : "3a36bc37-2594-4600-82f8-f9e61877bc6f",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -160,16 +160,16 @@
   ],
   "assets" : [
     {
-      "id" : "4d26da9b-f4ed-42b7-aac1-3009b78bf3a3",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "e39fa084-5f24-4e3e-b2db-7a32f6e1c788",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "d68b2036-84f6-476b-800c-ec833dfa8e14",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "beccecbd-e5db-451d-b8c5-2a1d94a9ce08",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
@@ -209,7 +209,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "ff80dffb-a2b9-403b-a8a1-fae2c27d82cd",
+  "uuid" : "e2f82eb6-7c47-4da2-9ef5-c2a49b1b3c6c",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

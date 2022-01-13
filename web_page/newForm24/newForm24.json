@@ -1,9 +1,112 @@
 {
   "modelVersion" : "2.2",
-  "id" : "newForm1",
-  "name" : "newForm1",
-  "lastUpdate" : 1642114935507,
+  "id" : "newForm24",
+  "name" : "newForm24",
+  "lastUpdate" : 1642115142380,
   "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "c17461d6-bcde-4fed-81fe-8a661fcc0303",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "3c360337-9c0a-492e-9b93-569210a6e3a2",
+              "hasValidationError" : false,
+              "id" : "pbTitle",
+              "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "allowHtml" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "label" : {
+                  "type" : "interpolation"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayDescription }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "57f85a08-806e-4f81-b466-d626f66f7c4f",
+              "hasValidationError" : false,
+              "id" : "pbText",
+              "description" : ""
+            }
+          ]
+        ]
+      }
+    ],
     [
       {
         "type" : "formContainer",
@@ -11,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "16997c8f-2ee5-411d-a053-ce072de59ba7",
+        "reference" : "21f74b10-c5db-404c-8571-dd44bb5174fe",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -20,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "7a12a597-7a95-4d48-9711-bf67c76ce354",
+          "reference" : "68005290-3dcb-4976-9f8d-be586e59f184",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -74,7 +177,7 @@
                   },
                   "action" : {
                     "type" : "constant",
-                    "value" : "Start process"
+                    "value" : "Submit task"
                   },
                   "collectionToModify" : {
                     "type" : "variable"
@@ -95,7 +198,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "256423be-8a83-482f-b684-14fee895ad15",
+                "reference" : "78fc883b-f979-4c80-a822-a7bbae57ce5a",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -147,7 +250,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "b83794ef-6a8d-40d7-8c3e-407d04cef3d8",
+                "reference" : "eebe2f13-3467-4487-bced-cd623636044c",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -160,26 +263,26 @@
   ],
   "assets" : [
     {
-      "id" : "4d26da9b-f4ed-42b7-aac1-3009b78bf3a3",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "83386a97-6af1-4f3c-af25-a3479b9af1f5",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "d68b2036-84f6-476b-800c-ec833dfa8e14",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "932d9bad-efd1-4d3d-b5c4-29ae4d7d64a5",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
   ],
   "inactiveAssets" : [ ],
   "variables" : {
-    "formInput" : {
-      "type" : "json",
+    "task" : {
+      "type" : "url",
       "value" : [
-        "{ }"
+        "../API/bpm/userTask/{{taskId}}"
       ],
       "exposed" : false
     },
@@ -206,10 +309,24 @@
         "}"
       ],
       "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "ff80dffb-a2b9-403b-a8a1-fae2c27d82cd",
+  "uuid" : "394b83f3-55e0-4089-b113-f39fedb44e7f",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

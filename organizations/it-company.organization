@@ -2,19 +2,6 @@
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="it-company">
   <customUserInfoDefinitions/>
   <users>
-    <user userName="admin">
-      <firstName>Administrarko</firstName>
-      <lastName>Administrarkovic</lastName>
-      <title>Object</title>
-      <jobTitle>Boss</jobTitle>
-      <manager></manager>
-      <personalData/>
-      <professionalData>
-        <email>Isaonee2team+uppadmin@gmail.com</email>
-      </professionalData>
-      <password encrypted="false">bpm</password>
-      <customUserInfoValues/>
-    </user>
     <user userName="hr.manager">
       <firstName>HR</firstName>
       <lastName>Manager</lastName>
@@ -169,6 +156,12 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="Guest">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Member">
@@ -185,9 +178,6 @@
     <group name="it-company">
       <displayName>it-company</displayName>
     </group>
-    <group name="Admin" parentPath="/it-company">
-      <displayName>Admin</displayName>
-    </group>
     <group name="HR" parentPath="/it-company">
       <displayName>HR</displayName>
     </group>
@@ -203,15 +193,12 @@
     <group name="FinancialDept" parentPath="/it-company">
       <displayName>FinancialDept</displayName>
     </group>
+    <group name="Guest">
+      <displayName>Guest</displayName>
+    </group>
   </groups>
   <memberships>
     <membership>
-      <userName>admin</userName>
-      <roleName>Member</roleName>
-      <groupName>Admin</groupName>
-      <groupParentPath>/it-company</groupParentPath>
-    </membership>
-    <membership>
       <userName>hr.manager</userName>
       <roleName>Manager</roleName>
       <groupName>HR</groupName>
@@ -375,6 +362,11 @@
       <userName>dev.member4</userName>
       <roleName>Member</roleName>
       <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>Guest</userName>
+      <roleName>Member</roleName>
+      <groupName>Guest</groupName>
     </membership>
   </memberships>
 </organization:Organization>

@@ -17,5 +17,33 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.EquipmentCategory">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.EquipmentItem">
+            <fields>
+                <field type="STRING" length="255" name="type" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="amount" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.EquipmentCategory" fetchType="LAZY" name="category" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.EquipmentOrder">
+            <fields>
+                <field type="STRING" length="255" name="employeeName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="employeeSurname" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.EquipmentItem" fetchType="LAZY" name="equipmentItems" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
     </businessObjects>
 </businessObjectModel>

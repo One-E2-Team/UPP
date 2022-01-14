@@ -23,7 +23,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_SwU6fnSxEeyfqopOiyOtAQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_SwU6f3SxEeyfqopOiyOtAQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_X6iRV3S4EeyfqopOiyOtAQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_byYZsHTFEeyfqopOiyOtAQ" name="newForm25" content="47746b07-0b25-4a98-934c-5b24ac977d67" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_byYZsHTFEeyfqopOiyOtAQ" name="jobListingsForm" content="47746b07-0b25-4a98-934c-5b24ac977d67" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_hutxoHU7EeytUNvVPSzciA" name="iniciator" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_hutxoXU7EeytUNvVPSzciA" definitionId="bonita-actorfilter-initiator" version="1.0">
@@ -90,7 +90,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_8eFjSHS3EeyfqopOiyOtAQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_8eFjR3S3EeyfqopOiyOtAQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_5jSvqnTDEeyfqopOiyOtAQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_VVfOwHTFEeyfqopOiyOtAQ" name="newForm24" content="394b83f3-55e0-4089-b113-f39fedb44e7f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_VVfOwHTFEeyfqopOiyOtAQ" name="cvSubmissionForm" content="394b83f3-55e0-4089-b113-f39fedb44e7f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_UxBMIHU7EeytUNvVPSzciA" name="candidatefilter" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_UxBMIXU7EeytUNvVPSzciA" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -126,10 +126,10 @@
           <referencedElements xmi:type="expression:Expression" xmi:id="_8z9BYXS-EeyfqopOiyOtAQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
       </data>
-      <formMapping xmi:type="process:FormMapping" xmi:id="_SwU6hHSxEeyfqopOiyOtAQ">
+      <formMapping xmi:type="process:FormMapping" xmi:id="_SwU6hHSxEeyfqopOiyOtAQ" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_D-QdMHTFEeyfqopOiyOtAQ" name="newForm22" content="e2f82eb6-7c47-4da2-9ef5-c2a49b1b3c6c" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
-      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_SwU6hnSxEeyfqopOiyOtAQ">
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_SwU6hnSxEeyfqopOiyOtAQ" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_TRbsUHTFEeyfqopOiyOtAQ" name="newForm23" content="ad980df2-3087-4938-bb57-1e503b126674" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_SwU6iHSxEeyfqopOiyOtAQ" target="_X6hqQHS4EeyfqopOiyOtAQ" source="_SwU6c3SxEeyfqopOiyOtAQ">

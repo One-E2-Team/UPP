@@ -112,9 +112,9 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_YzCbEXTCEeyfqopOiyOtAQ" name="userId" content="userId" type="TYPE_VARIABLE" returnType="java.lang.Long">
               <referencedElements xmi:type="process:Data" xmi:id="_aBCfQHTCEeyfqopOiyOtAQ" name="userId" dataType="_sgd_T3PqEeyZdNBd0BKMRg"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_YzCbEnTCEeyfqopOiyOtAQ" name="newScript()" content="import org.apache.commons.collections4.functors.CatchAndRethrowClosure&#xD;&#xA;&#xD;&#xA;try{&#xD;&#xA;&#x9;return apiAccessor.getIdentityAPI().getUserByUserName(userData.get(&quot;username&quot;)).getId();&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
-              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_zpYRUHVEEeytUNvVPSzciA" name="userData" dataType="_sgd_UnPqEeyZdNBd0BKMRg" className="java.util.Map"/>
-              <referencedElements xmi:type="expression:Expression" xmi:id="_zpYRUXVEEeytUNvVPSzciA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_YzCbEnTCEeyfqopOiyOtAQ" name="getCreatedUserId()" content="import org.apache.commons.collections4.functors.CatchAndRethrowClosure&#xD;&#xA;&#xD;&#xA;try{&#xD;&#xA;&#x9;return apiAccessor.getIdentityAPI().getUserByUserName(userData.get(&quot;username&quot;)).getId();&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_jRzXMHVKEeytUNvVPSzciA" name="userData" dataType="_sgd_UnPqEeyZdNBd0BKMRg" className="java.util.Map"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_jRzXMXVKEeytUNvVPSzciA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_YzCbE3TCEeyfqopOiyOtAQ" type="ASSIGNMENT"/>
           </operations>
@@ -214,7 +214,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_R97Fx3S0EeyfqopOiyOtAQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_R97FxnS0EeyfqopOiyOtAQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_R97FyXS0EeyfqopOiyOtAQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_Nvh0cHU9EeytUNvVPSzciA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_mAe14HVIEeytUNvVPSzciA" name="personalDataForm" content="2ce096df-9317-40f3-bad2-1dd5c641c8ab" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_isSpoHU6EeytUNvVPSzciA" name="initiatorfilter" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_isSpoXU6EeytUNvVPSzciA" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -344,10 +344,10 @@
           <referencedElements xmi:type="expression:Expression" xmi:id="_F7wdg3U6EeytUNvVPSzciA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
       </data>
-      <formMapping xmi:type="process:FormMapping" xmi:id="_sgd_NHPqEeyZdNBd0BKMRg">
+      <formMapping xmi:type="process:FormMapping" xmi:id="_sgd_NHPqEeyZdNBd0BKMRg" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_9W9ZEHTEEeyfqopOiyOtAQ" name="newForm21" content="c597e5ec-96d4-40bc-8fbe-5fc3728794eb" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
-      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_sgd_NnPqEeyZdNBd0BKMRg">
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_sgd_NnPqEeyZdNBd0BKMRg" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_1NSGwHTFEeyfqopOiyOtAQ" name="newForm26" content="71b6b223-f838-4caa-8c81-0e032033abe0" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_sgd_OHPqEeyZdNBd0BKMRg" target="_R96esHS0EeyfqopOiyOtAQ" source="_sgd_I3PqEeyZdNBd0BKMRg">

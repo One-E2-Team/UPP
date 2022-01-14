@@ -155,9 +155,9 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_wOen5HUwEey-uZYfpqG2oA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_T7YjoHVGEey5Lta1x5FHVg" name="instanciationForm" content="a84f00e2-6bdc-4303-a515-25e4427470eb" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_T7YjoHVGEey5Lta1x5FHVg" name="conferenceRequestInstanciationForm" content="a84f00e2-6bdc-4303-a515-25e4427470eb" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
-      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_wOen5nUwEey-uZYfpqG2oA">
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_wOen5nUwEey-uZYfpqG2oA" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_wOen53UwEey-uZYfpqG2oA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_lOJs8HU7Eey2JLUaVZr_Yg" target="_51tn0HUwEey-uZYfpqG2oA" source="_DtunEHU3Eey-uZYfpqG2oA">

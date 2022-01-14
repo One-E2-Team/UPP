@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_sgd_IHPqEeyZdNBd0BKMRg" name="ApplicantRegistration" author="igors" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_sgd_IXPqEeyZdNBd0BKMRg" name="Applicant Registration">
       <elements xmi:type="process:Lane" xmi:id="_sgd_InPqEeyZdNBd0BKMRg" name="Guest lane" actor="_9JKnAHP7EeyZdNBd0BKMRg">
@@ -411,6 +411,44 @@
         <condition xmi:type="expression:Expression" xmi:id="_ETPgoXTDEeyfqopOiyOtAQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_9JKnAHP7EeyZdNBd0BKMRg" name="guest" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_Vki1oHVNEeytUNvVPSzciA" name="Development" version="7.12.0-004" username="Guest" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_VkjcsHVNEeytUNvVPSzciA">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_VkjcsXVNEeytUNvVPSzciA" name="guest">
+            <groups xmi:type="actormapping:Groups" xmi:id="_VkjcsnVNEeytUNvVPSzciA">
+              <group>/Guest</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_Vkjcs3VNEeytUNvVPSzciA"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_VkjctHVNEeytUNvVPSzciA"/>
+            <users xmi:type="actormapping:Users" xmi:id="_VkjctXVNEeytUNvVPSzciA"/>
+          </actorMapping>
+        </actorMappings>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_Vki1oXVNEeytUNvVPSzciA" type="CONNECTOR" definitionId="email" definitionVersion="1.2.0" implementationId="email-impl" implementationVersion="1.3.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_Vki1onVNEeytUNvVPSzciA" type="CONNECTOR" definitionId="scripting-groovy-script" definitionVersion="1.0.1" implementationId="scripting-groovy-script-impl" implementationVersion="1.1.3"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_Vki1o3VNEeytUNvVPSzciA" type="ACTOR_FILTER" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0" implementationId="bonita-actorfilter-single-user-impl" implementationVersion="1.0.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_Vki1pHVNEeytUNvVPSzciA" type="ACTOR_FILTER" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0" implementationId="bonita-actorfilter-initiator-impl" implementationVersion="1.0.0"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Vki1pXVNEeytUNvVPSzciA" id="CONNECTOR">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_Vki1pnVNEeytUNvVPSzciA" id="email-impl-1.3.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_Vki1p3VNEeytUNvVPSzciA" key="email-impl -- 1.3.0" value="bonita-connector-email-1.3.0.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_Vki1qHVNEeytUNvVPSzciA" key="email-impl -- 1.3.0" value="javax.mail-1.6.2.jar" type="CONNECTOR"/>
+            <fragments xmi:type="configuration:Fragment" xmi:id="_Vki1qXVNEeytUNvVPSzciA" key="email-impl -- 1.3.0" value="javax.mail-api-1.6.2.jar" type="CONNECTOR"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_Vki1qnVNEeytUNvVPSzciA" id="scripting-groovy-script-impl-1.1.3">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_Vki1q3VNEeytUNvVPSzciA" key="scripting-groovy-script-impl -- 1.1.3" value="bonita-connector-groovy-1.1.3.jar" type="CONNECTOR"/>
+          </children>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Vki1rHVNEeytUNvVPSzciA" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Vki1rXVNEeytUNvVPSzciA" id="ACTOR_FILTER">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_Vki1rnVNEeytUNvVPSzciA" id="bonita-actorfilter-single-user-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_Vki1r3VNEeytUNvVPSzciA" key="bonita-actorfilter-single-user-impl -- 1.0.0" value="bonita-actorfilter-single-user-1.0.0.jar" type="ACTOR_FILTER"/>
+          </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_Vki1sHVNEeytUNvVPSzciA" id="bonita-actorfilter-initiator-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_Vki1sXVNEeytUNvVPSzciA" key="bonita-actorfilter-initiator-impl -- 1.0.0" value="bonita-actorfilter-initiator-1.0.0.jar" type="ACTOR_FILTER"/>
+          </children>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Vki1snVNEeytUNvVPSzciA" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Vki1s3VNEeytUNvVPSzciA" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_Vki1tHVNEeytUNvVPSzciA" id="OTHER"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_sgd_PHPqEeyZdNBd0BKMRg"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_sgd_PXPqEeyZdNBd0BKMRg">
         <name xmi:type="expression:Expression" xmi:id="_sgd_PnPqEeyZdNBd0BKMRg" content="" returnTypeFixed="true"/>

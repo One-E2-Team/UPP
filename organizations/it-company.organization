@@ -15,6 +15,7 @@
     <user userName="hr.member1">
       <firstName>HR</firstName>
       <lastName>Member 1</lastName>
+      <manager>hr.manager</manager>
       <personalData/>
       <professionalData>
         <email>Isaonee2team+upphrmember1@gmail.com</email>
@@ -25,6 +26,7 @@
     <user userName="hr.member2">
       <firstName>HR</firstName>
       <lastName>Member 2</lastName>
+      <manager>hr.manager</manager>
       <personalData/>
       <professionalData>
         <email>Isaonee2team+upphrmember2@gmail.com</email>
@@ -45,6 +47,7 @@
     <user userName="techdept.member1">
       <firstName>TechDept</firstName>
       <lastName>Member 1</lastName>
+      <manager>techdept.manager</manager>
       <personalData/>
       <professionalData>
         <email>Isaonee2team+upptechdeptmember1@gmail.com</email>
@@ -55,6 +58,7 @@
     <user userName="techdept.member2">
       <firstName>TechDept</firstName>
       <lastName>Member 2</lastName>
+      <manager>techdept.manager</manager>
       <personalData/>
       <professionalData>
         <email>Isaonee2team+upptechdeptmember2@gmail.com</email>
@@ -75,6 +79,7 @@
     <user userName="findept.member1">
       <firstName>FinDept</firstName>
       <lastName>Member 1</lastName>
+      <manager>findept.manager</manager>
       <personalData/>
       <professionalData>
         <email>Isaonee2team+uppfindeptmember1@gmail.com</email>
@@ -85,6 +90,7 @@
     <user userName="findept.member2">
       <firstName>FinDept</firstName>
       <lastName>Member 2</lastName>
+      <manager>findept.manager</manager>
       <personalData/>
       <professionalData>
         <email>Isaonee2team+uppfindeptmember2@gmail.com</email>
@@ -95,6 +101,7 @@
     <user userName="dev.senior1">
       <firstName>Dev</firstName>
       <lastName>Senior 1</lastName>
+      <manager></manager>
       <personalData/>
       <professionalData>
         <email>Isaonee2team+uppdevsenior1@gmail.com</email>
@@ -162,6 +169,13 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="ceo">
+      <firstName>Ceo</firstName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Member">
@@ -172,6 +186,9 @@
     </role>
     <role name="Senior">
       <displayName>Senior</displayName>
+    </role>
+    <role name="CEO">
+      <displayName>CEO</displayName>
     </role>
   </roles>
   <groups>
@@ -367,6 +384,11 @@
       <userName>Guest</userName>
       <roleName>Member</roleName>
       <groupName>Guest</groupName>
+    </membership>
+    <membership>
+      <userName>ceo</userName>
+      <roleName>Member</roleName>
+      <groupName>it-company</groupName>
     </membership>
   </memberships>
 </organization:Organization>

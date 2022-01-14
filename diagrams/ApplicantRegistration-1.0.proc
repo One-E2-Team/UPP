@@ -112,9 +112,9 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_YzCbEXTCEeyfqopOiyOtAQ" name="userId" content="userId" type="TYPE_VARIABLE" returnType="java.lang.Long">
               <referencedElements xmi:type="process:Data" xmi:id="_aBCfQHTCEeyfqopOiyOtAQ" name="userId" dataType="_sgd_T3PqEeyZdNBd0BKMRg"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_YzCbEnTCEeyfqopOiyOtAQ" name="newScript()" content="import org.apache.commons.collections4.functors.CatchAndRethrowClosure&#xD;&#xA;&#xD;&#xA;try{&#xD;&#xA;&#x9;return apiAccessor.getIdentityAPI().getUserByUserName(userData.get(&quot;username&quot;));&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
-              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_q4-swHTCEeyfqopOiyOtAQ" name="userData" dataType="_sgd_UnPqEeyZdNBd0BKMRg" className="java.util.Map"/>
-              <referencedElements xmi:type="expression:Expression" xmi:id="_q4_T0HTCEeyfqopOiyOtAQ" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_YzCbEnTCEeyfqopOiyOtAQ" name="newScript()" content="import org.apache.commons.collections4.functors.CatchAndRethrowClosure&#xD;&#xA;&#xD;&#xA;try{&#xD;&#xA;&#x9;return apiAccessor.getIdentityAPI().getUserByUserName(userData.get(&quot;username&quot;)).getId();&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;&#xD;&#xA;}" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_zpYRUHVEEeytUNvVPSzciA" name="userData" dataType="_sgd_UnPqEeyZdNBd0BKMRg" className="java.util.Map"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_zpYRUXVEEeytUNvVPSzciA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_YzCbE3TCEeyfqopOiyOtAQ" type="ASSIGNMENT"/>
           </operations>
@@ -124,7 +124,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_xXa8BXRjEeyiLfJTpggplQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_xXa8BHRjEeyiLfJTpggplQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_ElLYQHSOEeyiLfJTpggplQ" name="username and password" outgoing="_7Srf4HSSEeyiLfJTpggplQ" incoming="_gZ-NgHSREeyiLfJTpggplQ" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_ElLYQHSOEeyiLfJTpggplQ" name="username and password" outgoing="_7Srf4HSSEeyiLfJTpggplQ" incoming="_gZ-NgHSREeyiLfJTpggplQ" actor="_9JKnAHP7EeyZdNBd0BKMRg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_ElL_UXSOEeyiLfJTpggplQ" name="displayName()" content="def value = &quot;Set credentials for &quot; + userData.get(&quot;name&quot;) + &quot; &quot; + userData.get(&quot;surname&quot;);&#xD;&#xA;return value.substring(0, value.length()>255 ? 255 : value.length());" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
             <referencedElements xmi:type="process:JavaObjectData" xmi:id="_CunIIHSiEeyiLfJTpggplQ" name="userData" dataType="_sgd_UnPqEeyZdNBd0BKMRg" className="java.util.Map"/>
           </dynamicLabel>
@@ -157,6 +157,15 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_ElMmZ3SOEeyiLfJTpggplQ">
             <targetForm xmi:type="expression:Expression" xmi:id="_7TopgHSPEeyiLfJTpggplQ" name="credentialsForm" content="b977f60d-119c-4005-991c-aa55d0b874da" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_YkhIYHU6EeytUNvVPSzciA" name="initiatorfilter" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_YkhIYXU6EeytUNvVPSzciA" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_YkhIYnU6EeytUNvVPSzciA" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_YkhIY3U6EeytUNvVPSzciA" name="initiatorId" content="initiatorId" type="TYPE_VARIABLE" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_YkhIZHU6EeytUNvVPSzciA" name="initiatorId" dataType="_sgd_T3PqEeyZdNBd0BKMRg"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_ElMmZnSOEeyiLfJTpggplQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_s0PAsHSPEeyiLfJTpggplQ" name="username">
               <mapping xmi:type="process:ContractInputMapping" xmi:id="_s0PAsXSPEeyiLfJTpggplQ"/>
@@ -184,7 +193,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_gZeeQHSREeyiLfJTpggplQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_gZeeQnSREeyiLfJTpggplQ" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_R96esHS0EeyfqopOiyOtAQ" name="Personal Data" outgoing="_R-OAsHS0EeyfqopOiyOtAQ" incoming="_sgd_OHPqEeyZdNBd0BKMRg _iHRcAHTBEeyfqopOiyOtAQ" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_R96esHS0EeyfqopOiyOtAQ" name="Personal Data" outgoing="_R-OAsHS0EeyfqopOiyOtAQ" incoming="_sgd_OHPqEeyZdNBd0BKMRg _iHRcAHTBEeyfqopOiyOtAQ" actor="_9JKnAHP7EeyZdNBd0BKMRg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_R97FwXS0EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_R97FwHS0EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_R97FwnS0EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
@@ -205,8 +214,17 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_R97Fx3S0EeyfqopOiyOtAQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_R97FxnS0EeyfqopOiyOtAQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_R97FyXS0EeyfqopOiyOtAQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_R97FynS0EeyfqopOiyOtAQ" name="applicantRegForm" content="bd07edb5-ee78-455f-80aa-4d0009a40101" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_Nvh0cHU9EeytUNvVPSzciA" name="newForm27" content="c64b53cc-a40b-4edc-8307-1ddc78b314b6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_isSpoHU6EeytUNvVPSzciA" name="initiatorfilter" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_isSpoXU6EeytUNvVPSzciA" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_isSponU6EeytUNvVPSzciA" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_isSpo3U6EeytUNvVPSzciA" name="initiatorId" content="initiatorId" type="TYPE_VARIABLE" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_isSppHU6EeytUNvVPSzciA" name="initiatorId" dataType="_sgd_T3PqEeyZdNBd0BKMRg"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_R97FyHS0EeyfqopOiyOtAQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_1MK8MHS0EeyfqopOiyOtAQ" name="input1" type="COMPLEX">
               <mapping xmi:type="process:ContractInputMapping" xmi:id="_1MK8MXS0EeyfqopOiyOtAQ"/>
@@ -248,6 +266,13 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_tMznAXS2EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_tMznAHS2EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_tMznAnS2EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
+          <messageContent xmi:type="expression:Operation" xmi:id="_g5nnkHU5EeytUNvVPSzciA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g5wxgXU5EeytUNvVPSzciA" name="initiatorId" content="initiatorId" type="TYPE_VARIABLE" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:Data" xmi:id="_LirCsHU6EeytUNvVPSzciA" name="initiatorId" dataType="_sgd_T3PqEeyZdNBd0BKMRg"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g5wxgHU5EeytUNvVPSzciA" name="initiatorId" content="initiatorId" returnType="java.lang.Long"/>
+            <operator xmi:type="expression:Operator" xmi:id="_g5nnkXU5EeytUNvVPSzciA" type="ASSIGNMENT"/>
+          </messageContent>
         </elements>
         <elements xmi:type="process:ServiceTask" xmi:id="_iHA9UHTBEeyfqopOiyOtAQ" name="Message Exec" outgoing="_iHRcAHTBEeyfqopOiyOtAQ" incoming="_v1cdMHS2EeyfqopOiyOtAQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_iHA9UnTBEeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
@@ -313,6 +338,12 @@
       <data xmi:type="process:Data" xmi:id="_HL7acHTCEeyfqopOiyOtAQ" name="userId" dataType="_sgd_T3PqEeyZdNBd0BKMRg">
         <defaultValue xmi:type="expression:Expression" xmi:id="_HL7acXTCEeyfqopOiyOtAQ" name="0" content="0" returnType="java.lang.Long"/>
       </data>
+      <data xmi:type="process:Data" xmi:id="_F7wdgHU6EeytUNvVPSzciA" name="initiatorId" dataType="_sgd_T3PqEeyZdNBd0BKMRg">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_F7wdgXU6EeytUNvVPSzciA" name="init_initiatorId()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy());&#xD;&#xA;&#x9;return processInitiator.getId();&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;return 0;&#xD;&#xA;}&#xD;&#xA;0" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_F7wdgnU6EeytUNvVPSzciA" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_F7wdg3U6EeytUNvVPSzciA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+        </defaultValue>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_sgd_NHPqEeyZdNBd0BKMRg">
         <targetForm xmi:type="expression:Expression" xmi:id="_9W9ZEHTEEeyfqopOiyOtAQ" name="newForm21" content="c597e5ec-96d4-40bc-8fbe-5fc3728794eb" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
@@ -351,7 +382,7 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_R-OAsHS0EeyfqopOiyOtAQ" target="_fd5YEHSXEeyiLfJTpggplQ" source="_R96esHS0EeyfqopOiyOtAQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_R-OAsXS0EeyfqopOiyOtAQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_R-OAsnS0EeyfqopOiyOtAQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_R-OAsnS0EeyfqopOiyOtAQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_v1cdMHS2EeyfqopOiyOtAQ" target="_iHA9UHTBEeyfqopOiyOtAQ" source="_tMxx0HS2EeyfqopOiyOtAQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_v1dEQHS2EeyfqopOiyOtAQ"/>

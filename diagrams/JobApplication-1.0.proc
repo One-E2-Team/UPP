@@ -13,7 +13,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_gUGogXSxEeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_gUGog3SxEeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_X6hqQHS4EeyfqopOiyOtAQ" name="Choose Job to Apply" outgoing="_Tc1SwHS_EeyfqopOiyOtAQ" incoming="_SwU6iHSxEeyfqopOiyOtAQ" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_X6hqQHS4EeyfqopOiyOtAQ" name="Choose Job to Apply" outgoing="_Tc1SwHS_EeyfqopOiyOtAQ" incoming="_SwU6iHSxEeyfqopOiyOtAQ" actor="_ndbXcHS4EeyfqopOiyOtAQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_SwU6eHSxEeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_SwU6eXSxEeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_SwU6enSxEeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
@@ -25,6 +25,13 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_X6iRV3S4EeyfqopOiyOtAQ">
             <targetForm xmi:type="expression:Expression" xmi:id="_byYZsHTFEeyfqopOiyOtAQ" name="newForm25" content="47746b07-0b25-4a98-934c-5b24ac977d67" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_hutxoHU7EeytUNvVPSzciA" name="iniciator" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_hutxoXU7EeytUNvVPSzciA" definitionId="bonita-actorfilter-initiator" version="1.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_hutxonU7EeytUNvVPSzciA" key="autoAssign">
+                <expression xmi:type="expression:Expression" xmi:id="_hutxo3U7EeytUNvVPSzciA" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_X6iRVnS4EeyfqopOiyOtAQ"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_X6iRWXS4EeyfqopOiyOtAQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
@@ -43,7 +50,14 @@
             </correlation>
             <targetProcessExpression xmi:type="expression:Expression" xmi:id="_r2O303TFEeyfqopOiyOtAQ" name="Applicant Registration" content="Applicant Registration" returnTypeFixed="true"/>
             <targetElementExpression xmi:type="expression:Expression" xmi:id="_r2O31HTFEeyfqopOiyOtAQ" name="Start2" content="Start2" returnTypeFixed="true"/>
-            <messageContent xmi:type="expression:TableExpression" xmi:id="_r2O31XTFEeyfqopOiyOtAQ"/>
+            <messageContent xmi:type="expression:TableExpression" xmi:id="_r2O31XTFEeyfqopOiyOtAQ">
+              <expressions xmi:type="expression:ListExpression" xmi:id="_Y35M0HU5EeytUNvVPSzciA">
+                <expressions xmi:type="expression:Expression" xmi:id="_Y35M0XU5EeytUNvVPSzciA" name="initiatorId" content="initiatorId" returnTypeFixed="true"/>
+                <expressions xmi:type="expression:Expression" xmi:id="_Y35M0nU5EeytUNvVPSzciA" name="candidateUserId" content="candidateUserId" type="TYPE_VARIABLE" returnType="java.lang.Long">
+                  <referencedElements xmi:type="process:Data" xmi:id="_Y35M03U5EeytUNvVPSzciA" name="candidateUserId" dataType="_SwU6n3SxEeyfqopOiyOtAQ"/>
+                </expressions>
+              </expressions>
+            </messageContent>
           </events>
         </elements>
       </elements>
@@ -66,7 +80,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_uEH9oHTDEeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_uEH9onTDEeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_5jSvoHTDEeyfqopOiyOtAQ" name="CV" outgoing="_8eUMwHS3EeyfqopOiyOtAQ" incoming="_uEWAEHTDEeyfqopOiyOtAQ" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_5jSvoHTDEeyfqopOiyOtAQ" name="CV" outgoing="_8eUMwHS3EeyfqopOiyOtAQ" incoming="_uEWAEHTDEeyfqopOiyOtAQ" actor="_HsUg0HS5EeyfqopOiyOtAQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_8eFjQnS3EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_8eFjQXS3EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_8eFjQ3S3EeyfqopOiyOtAQ" name="" content="" returnTypeFixed="true"/>
@@ -78,6 +92,15 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_5jSvqnTDEeyfqopOiyOtAQ">
             <targetForm xmi:type="expression:Expression" xmi:id="_VVfOwHTFEeyfqopOiyOtAQ" name="newForm24" content="394b83f3-55e0-4089-b113-f39fedb44e7f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_UxBMIHU7EeytUNvVPSzciA" name="candidatefilter" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_UxBMIXU7EeytUNvVPSzciA" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_UxBMInU7EeytUNvVPSzciA" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_UxBMI3U7EeytUNvVPSzciA" name="candidateUserId" content="candidateUserId" type="TYPE_VARIABLE" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_UxBMJHU7EeytUNvVPSzciA" name="candidateUserId" dataType="_SwU6n3SxEeyfqopOiyOtAQ"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_5jSvqXTDEeyfqopOiyOtAQ"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_5jSvrHTDEeyfqopOiyOtAQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>

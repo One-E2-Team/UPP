@@ -1,9 +1,112 @@
 {
   "modelVersion" : "2.2",
-  "id" : "conferenceRequestInstanciationForm",
-  "name" : "conferenceRequestInstanciationForm",
-  "lastUpdate" : 1642172534652,
+  "id" : "conferenceRequestForm",
+  "name" : "conferenceRequestForm",
+  "lastUpdate" : 1642175019371,
   "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "0cf0e9aa-351f-4332-841b-02a19f149a11",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 1"
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayName }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "55003ee4-69c5-4d39-85b1-cb9ea1740d90",
+              "hasValidationError" : false,
+              "id" : "pbTitle",
+              "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "allowHtml" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "label" : {
+                  "type" : "interpolation"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayDescription }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "1110b9d3-483d-457e-aac5-51e3f05a00b4",
+              "hasValidationError" : false,
+              "id" : "pbText",
+              "description" : ""
+            }
+          ]
+        ]
+      }
+    ],
     [
       {
         "type" : "formContainer",
@@ -11,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "499a01a7-6271-4a8c-ac18-8addeea2cbd1",
+        "reference" : "01f96bd6-8a17-4bb3-b228-69d4e73784e1",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -20,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "7dee1187-3d12-4c30-b1aa-b81d755e9cfd",
+          "reference" : "e185dd21-1d0e-4a54-a5ec-7b00a7dea882",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -59,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a53bc154-a046-49ce-bccf-9c9625a6d19f",
+                "reference" : "8ce1b47c-f5e9-44cd-a5d2-ca3c4c4ee9c4",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -91,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "78c4af6c-6b9a-48f9-97cf-63a773360015",
+                "reference" : "8e1a14bb-a2a4-4b7b-952a-8d6c9b734eaf",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -146,7 +249,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.conferenceRequestInput.employeeName"
+                          "value" : "conferenceRequest.employeeName"
                         },
                         "required" : {
                           "type" : "constant",
@@ -171,7 +274,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "9c6dd685-dcd1-4f04-87ec-c5d4e6cab800",
+                      "reference" : "6cc6a923-f6fa-465f-bcc8-87dd55fcbdc4",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -228,7 +331,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.conferenceRequestInput.employeeSurname"
+                          "value" : "conferenceRequest.employeeSurname"
                         },
                         "required" : {
                           "type" : "constant",
@@ -253,7 +356,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "1897ab22-6306-4ff2-bb4c-5f8170a4337b",
+                      "reference" : "df4a680a-9f9f-491b-8b71-fdff4c77fb4d",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -310,32 +413,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.conferenceRequestInput.conferenceName"
+                          "value" : "conferenceRequest.conferenceName"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
                         }
                       },
-                      "reference" : "b8e61db1-8347-4803-96b0-ff1c97841c5c",
+                      "reference" : "7ecc3a69-2a45-4058-a8ed-4bca37b30e94",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -377,10 +462,10 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.conferenceRequestInput.isOnline"
+                          "value" : "conferenceRequest.isOnline"
                         }
                       },
-                      "reference" : "69592b48-2876-48ea-b603-30b440ee4869",
+                      "reference" : "3c320840-7ec4-4a48-8bd0-e770ab9e2653",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox",
                       "description" : ""
@@ -453,10 +538,10 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.conferenceRequestInput.eventDate"
+                          "value" : "conferenceRequest.eventDate"
                         }
                       },
-                      "reference" : "c99a9d22-a686-4ab2-a603-396807cee6b6",
+                      "reference" : "b72f301e-cfd1-4bda-bef0-cff1dd0b820b",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -513,14 +598,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.conferenceRequestInput.price"
+                          "value" : "conferenceRequest.price"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : false
                         }
                       },
-                      "reference" : "8af4bbee-7791-4304-bcee-ed7e00f60805",
+                      "reference" : "9c1c29d5-0fbf-4c01-9b9b-08557f8742c0",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -579,7 +664,7 @@
                   },
                   "action" : {
                     "type" : "constant",
-                    "value" : "Start process"
+                    "value" : "Submit task"
                   },
                   "collectionToModify" : {
                     "type" : "variable"
@@ -600,7 +685,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "d6260e4e-98db-4b53-abc5-09bafd66c8d1",
+                "reference" : "a85cb225-dde3-49ab-9810-90ee57c2da01",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -652,7 +737,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "6ee5d3b1-6496-4a6c-b798-d3efd6ff127c",
+                "reference" : "597d363a-a09e-4a36-985e-b87a2e1ca10e",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -665,38 +750,33 @@
   ],
   "assets" : [
     {
-      "id" : "2cb80e37-ad08-4b6f-a14a-ca855081fce5",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "e92280ba-5a48-4da0-ac32-ca00827a311d",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "f1c33ded-6e75-409b-a17f-629837565ed1",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "a73da4e1-5775-4bd5-bc13-b09524ada155",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }
   ],
   "inactiveAssets" : [ ],
   "variables" : {
-    "formInput" : {
-      "type" : "json",
+    "conferenceRequest" : {
+      "type" : "url",
       "value" : [
-        "{\r",
-        "  \"conferenceRequestInput\" : {\r",
-        "    \"employeeName\" : \"\",\r",
-        "    \"employeeSurname\" : \"\",\r",
-        "    \"conferenceName\" : \"\",\r",
-        "    \"isOnline\" : false,\r",
-        "    \"eventDate\" : null,\r",
-        "    \"price\" : \"\",\r",
-        "    \"approved\" : false,\r",
-        "    \"explanation\" : \"\",\r",
-        "    \"allowedBudget\" : 0\r",
-        "  }\r",
-        "}"
+        "../{{context.conferenceRequest_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "task" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}"
       ],
       "exposed" : false
     },
@@ -718,15 +798,42 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "\tconferenceRequestInput: $data.formInput.conferenceRequestInput",
+        "if( $data.conferenceRequest ){",
+        "\treturn {",
+        "\t\t//map conferenceRequest variable to expected task contract input",
+        "\t\tconferenceRequestInput: {",
+        "\t\t\temployeeName: $data.conferenceRequest.employeeName !== undefined ? $data.conferenceRequest.employeeName : null,",
+        "\t\t\temployeeSurname: $data.conferenceRequest.employeeSurname !== undefined ? $data.conferenceRequest.employeeSurname : null,",
+        "\t\t\tconferenceName: $data.conferenceRequest.conferenceName !== undefined ? $data.conferenceRequest.conferenceName : null,",
+        "\t\t\tisOnline: $data.conferenceRequest.isOnline !== undefined ? $data.conferenceRequest.isOnline : null,",
+        "\t\t\teventDate: $data.conferenceRequest.eventDate !== undefined ? $data.conferenceRequest.eventDate : null,",
+        "\t\t\tprice: $data.conferenceRequest.price !== undefined ? $data.conferenceRequest.price : null,",
+        "\t\t\tapproved: $data.conferenceRequest.approved !== undefined ? $data.conferenceRequest.approved : null,",
+        "\t\t\texplanation: $data.conferenceRequest.explanation !== undefined ? $data.conferenceRequest.explanation : null,",
+        "\t\t\tallowedBudget: $data.conferenceRequest.allowedBudget !== undefined ? $data.conferenceRequest.allowedBudget : null",
+        "\t\t}",
+        "\t}",
         "}"
+      ],
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
       ],
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "a84f00e2-6bdc-4303-a515-25e4427470eb",
+  "uuid" : "c4fa49b0-a229-4d72-b82e-4856062f326b",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

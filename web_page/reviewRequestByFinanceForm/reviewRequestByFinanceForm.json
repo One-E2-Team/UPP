@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "reviewRequestForm",
-  "name" : "reviewRequestForm",
-  "lastUpdate" : 1642177985802,
+  "id" : "reviewRequestByFinanceForm",
+  "name" : "reviewRequestByFinanceForm",
+  "lastUpdate" : 1642178660977,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "37571075-5b3c-4a7a-b2cc-723a20b1945b",
+        "reference" : "3db3caab-9963-4efe-b2ae-69f0340bc87c",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "55645e8d-0b13-4ad5-bc09-bb2ba6aa56f9",
+              "reference" : "36ec112e-cb88-4339-966a-e27a44a15a26",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "0d7caab1-4195-4da4-84c7-bf0d1106decb",
+              "reference" : "5a85cf43-c526-44a7-b1fe-ee8a20daf77b",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "2c67e1a8-db19-48f3-8dff-764f12eaa510",
+        "reference" : "4d7aa3c5-0bb3-48b8-8c01-4f8817f64675",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "877930d8-00d5-4c25-92b8-4a07cfe8fb08",
+          "reference" : "138b0798-3d5e-41ec-842d-535c71dd9204",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -162,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "0f0b96a8-94f3-4d8f-9d30-f403351f9417",
+                "reference" : "23df9743-6433-4ffd-ba7e-c8b25d2abde1",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -194,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "ce7030e1-4eff-4814-8907-16fe1b6e39cc",
+                "reference" : "4fa3c5be-5af7-4976-94f3-ef3144de7a16",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -274,7 +274,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "c7debfb3-b22d-4da4-94f4-acf231e590f7",
+                      "reference" : "f35e65d1-ea32-458c-a4e2-edc507510dbb",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -356,7 +356,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "3d7bb575-63c2-4ab1-9536-f9befbc904ed",
+                      "reference" : "dc63c015-0c07-4563-982c-fd3dfbe52e93",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -438,7 +438,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "c8f5696f-4d58-4c6d-9a6d-4e047085f1ea",
+                      "reference" : "aae7defd-301c-4dda-8f30-1ba1890483a8",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -487,7 +487,7 @@
                           "value" : false
                         }
                       },
-                      "reference" : "2fed2ca7-fd5b-41ee-b772-740aac860bfc",
+                      "reference" : "e7b1b18a-5612-4798-8839-01cd5b38545c",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox",
                       "description" : ""
@@ -563,7 +563,7 @@
                           "value" : "conferenceRequest.eventDate"
                         }
                       },
-                      "reference" : "c6d252ed-b36d-4c4c-a62f-ddb664b07cc3",
+                      "reference" : "f19c6a6b-d3bb-4e33-8fe4-348c491f86b7",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -645,7 +645,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "676fff1a-090b-447c-a7b7-10d42594d217",
+                      "reference" : "7cdde868-5463-4ad1-91a8-f736c975e984",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -669,55 +669,6 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Approved"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "conferenceRequest.approved"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        }
-                      },
-                      "reference" : "7b518503-7ce7-495c-a2c0-7471aed76ffe",
-                      "hasValidationError" : false,
-                      "id" : "pbCheckbox",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "conferenceRequest.approved"
-                        },
                         "labelPosition" : {
                           "type" : "constant",
                           "value" : "top"
@@ -732,89 +683,7 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Explanation"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "conferenceRequest.explanation"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
-                        }
-                      },
-                      "reference" : "78ea3184-45bc-40d9-84ef-65042bc0426c",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "conferenceRequest.isOnline"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
@@ -858,7 +727,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "f2ca4005-b020-4adb-8ef0-d899c97d01c3",
+                      "reference" : "6bbf50a2-ce47-46b2-9d84-956d4b7cc551",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -894,7 +763,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "OK"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -936,9 +805,32 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
-                "reference" : "339b3af7-77fd-4951-9a44-e9acc0d47872",
+                "reference" : "9afab14b-cafc-40c3-b4f0-4728b4138865",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -990,7 +882,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "73d7c0ce-28d1-49c8-8742-4a4d184888af",
+                "reference" : "88a57252-5639-4a26-b655-ef8ab2303d80",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -1003,14 +895,14 @@
   ],
   "assets" : [
     {
-      "id" : "d9b1020f-14fd-4199-9c49-e82794d49892",
+      "id" : "0030f5bf-1c4b-4eed-b682-90043f648cb6",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "2985ee6c-479f-46eb-ace8-c955d6d4bfa2",
+      "id" : "3fe32506-e777-4a75-a796-8f58a67da780",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
@@ -1061,8 +953,6 @@
         "\t\t\tisOnline: $data.conferenceRequest.isOnline !== undefined ? $data.conferenceRequest.isOnline : null,",
         "\t\t\teventDate: $data.conferenceRequest.eventDate !== undefined ? $data.conferenceRequest.eventDate : null,",
         "\t\t\tprice: $data.conferenceRequest.price !== undefined ? $data.conferenceRequest.price : null,",
-        "\t\t\tapproved: $data.conferenceRequest.approved !== undefined ? $data.conferenceRequest.approved : null,",
-        "\t\t\texplanation: $data.conferenceRequest.explanation !== undefined ? $data.conferenceRequest.explanation : null,",
         "\t\t\tallowedBudget: $data.conferenceRequest.allowedBudget !== undefined ? $data.conferenceRequest.allowedBudget : null",
         "\t\t}",
         "\t}",
@@ -1086,7 +976,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "515cb094-90cd-47a5-886b-65d9eafeba42",
+  "uuid" : "80a17b01-e550-4a75-bf18-988247af15d9",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "reviewRequestByFinanceForm",
-  "name" : "reviewRequestByFinanceForm",
-  "lastUpdate" : 1642348323967,
+  "id" : "grantBudgetForm",
+  "name" : "grantBudgetForm",
+  "lastUpdate" : 1642337113913,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "3db3caab-9963-4efe-b2ae-69f0340bc87c",
+        "reference" : "96d18483-5481-4a81-8c49-7d4414f18796",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "36ec112e-cb88-4339-966a-e27a44a15a26",
+              "reference" : "4519f723-2d26-4e65-9735-c4ee07593f6a",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "5a85cf43-c526-44a7-b1fe-ee8a20daf77b",
+              "reference" : "35addb8f-c382-48cd-966a-15f282cb2ecb",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "4d7aa3c5-0bb3-48b8-8c01-4f8817f64675",
+        "reference" : "bae80d13-3e9c-4a6e-86b2-2997a26ac403",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "138b0798-3d5e-41ec-842d-535c71dd9204",
+          "reference" : "0cda111a-1a51-4b49-bdb6-d7947bd17b48",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -151,7 +151,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Conference Request"
+                    "value" : "Please grant allowed budget for transportation and accommodation for a live conference."
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -162,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "23df9743-6433-4ffd-ba7e-c8b25d2abde1",
+                "reference" : "095e22d7-34fd-4263-b4ed-03478147d355",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -194,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "4fa3c5be-5af7-4976-94f3-ef3144de7a16",
+                "reference" : "25082150-0167-49ac-89f7-eb9294494e2f",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -205,7 +205,89 @@
                         "md" : 12,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 12
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Allowed Budget (RSD)"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "number"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "conferenceRequest.allowedBudget"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        }
+                      },
+                      "reference" : "49cca747-17e0-47f7-96d0-b43225fd868f",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 4
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -274,7 +356,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "aae7defd-301c-4dda-8f30-1ba1890483a8",
+                      "reference" : "d4ad61bc-f650-4734-b67f-c91bca43ddbf",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -356,7 +438,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "f35e65d1-ea32-458c-a4e2-edc507510dbb",
+                      "reference" : "a2484ce0-07fa-420a-96a9-1d4141e3d896",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -436,7 +518,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "dc63c015-0c07-4563-982c-fd3dfbe52e93",
+                      "reference" : "b52c2834-91de-4100-a0d4-a60d196d94d6",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -512,7 +594,7 @@
                           "value" : "conferenceRequest.eventDate"
                         }
                       },
-                      "reference" : "f19c6a6b-d3bb-4e33-8fe4-348c491f86b7",
+                      "reference" : "f4a44c0e-4c23-4c37-9d68-2467e1c77f77",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -524,55 +606,6 @@
                         "sm" : 12,
                         "xs" : 12,
                         "lg" : 6
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Is Online"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "conferenceRequest.isOnline"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        }
-                      },
-                      "reference" : "e7b1b18a-5612-4798-8839-01cd5b38545c",
-                      "hasValidationError" : false,
-                      "id" : "pbCheckbox",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -641,160 +674,10 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "7cdde868-5463-4ad1-91a8-f736c975e984",
+                      "reference" : "6c475727-9a9f-4fdd-a4ed-edbfb160b306",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Allowed Budget (RSD)"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "number"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "conferenceRequest.allowedBudget"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
-                        }
-                      },
-                      "reference" : "6bbf50a2-ce47-46b2-9d84-956d4b7cc551",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Select a technical department user to forward task"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "placeholder" : {
-                          "type" : "interpolation",
-                          "value" : "Select a user"
-                        },
-                        "availableValues" : {
-                          "type" : "expression",
-                          "value" : "techDeptUsers"
-                        },
-                        "displayedKey" : {
-                          "type" : "constant",
-                          "value" : "userName"
-                        },
-                        "returnedKey" : {
-                          "type" : "expression",
-                          "value" : ""
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "selectedUser"
-                        }
-                      },
-                      "reference" : "baf9abfe-2ab5-4d8e-859b-e92d1739890a",
-                      "hasValidationError" : false,
-                      "id" : "pbSelect"
                     }
                   ]
                 ]
@@ -827,7 +710,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "OK"
+                    "value" : "Submit"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -869,32 +752,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "9afab14b-cafc-40c3-b4f0-4728b4138865",
+                "reference" : "b3b531bb-60ca-47ab-9c23-1694342d6725",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -946,7 +806,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "88a57252-5639-4a26-b655-ef8ab2303d80",
+                "reference" : "ebf4eb9a-90f6-4ec4-a082-e176acff2e07",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -959,16 +819,16 @@
   ],
   "assets" : [
     {
-      "id" : "0030f5bf-1c4b-4eed-b682-90043f648cb6",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "2d076a64-c16b-4fb4-81c2-8631e7c5d8f7",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "3fe32506-e777-4a75-a796-8f58a67da780",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "1e4f6943-c828-44d8-a3d5-83c96530cba2",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
@@ -1018,8 +878,7 @@
         "\t\t\teventDate: $data.conferenceRequest.eventDate !== undefined ? $data.conferenceRequest.eventDate : null,",
         "\t\t\tprice: $data.conferenceRequest.price !== undefined ? $data.conferenceRequest.price : null,",
         "\t\t\tallowedBudget: $data.conferenceRequest.allowedBudget !== undefined ? $data.conferenceRequest.allowedBudget : null",
-        "\t\t},",
-        "\t\tselectedTechUserId : $data.selectedUser.id",
+        "\t\t}",
         "\t}",
         "}"
       ],
@@ -1038,33 +897,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "techDeptUsers" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user?p=0&c=50&f=group_id=104"
-      ],
-      "advancedOptions" : { },
-      "exposed" : false
-    },
-    "techDeptGroup" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/group?f=name=TechnicalDept"
-      ],
-      "advancedOptions" : { },
-      "exposed" : false
-    },
-    "selectedUser" : {
-      "type" : "json",
-      "value" : [
-        "{}"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "80a17b01-e550-4a75-bf18-988247af15d9",
+  "uuid" : "56a53a86-33a1-4e00-91e6-417a1afd17fd",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

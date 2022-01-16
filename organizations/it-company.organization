@@ -179,6 +179,22 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="supplier1">
+      <firstName>Supplier</firstName>
+      <lastName>1</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="supplier2">
+      <firstName>Supplier</firstName>
+      <lastName>2</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Member">
@@ -215,6 +231,9 @@
     </group>
     <group name="Guest">
       <displayName>Guest</displayName>
+    </group>
+    <group name="Supplier">
+      <displayName>Supplier</displayName>
     </group>
   </groups>
   <memberships>
@@ -392,6 +411,16 @@
       <userName>ceo</userName>
       <roleName>Member</roleName>
       <groupName>it-company</groupName>
+    </membership>
+    <membership>
+      <userName>supplier1</userName>
+      <roleName>Member</roleName>
+      <groupName>Supplier</groupName>
+    </membership>
+    <membership>
+      <userName>supplier2</userName>
+      <roleName>Member</roleName>
+      <groupName>Supplier</groupName>
     </membership>
   </memberships>
 </organization:Organization>

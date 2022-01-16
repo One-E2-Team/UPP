@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "reviewRequestByFinanceForm",
-  "name" : "reviewRequestByFinanceForm",
-  "lastUpdate" : 1642348323967,
+  "id" : "explanationForRequestForm",
+  "name" : "explanationForRequestForm",
+  "lastUpdate" : 1642337880564,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "3db3caab-9963-4efe-b2ae-69f0340bc87c",
+        "reference" : "770eb4af-8333-41d4-86bf-d55281416b85",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "36ec112e-cb88-4339-966a-e27a44a15a26",
+              "reference" : "d6fbf856-2764-4e01-808e-56eab44a92fc",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "5a85cf43-c526-44a7-b1fe-ee8a20daf77b",
+              "reference" : "89f00cba-c5af-4b55-8b16-7de31c40a8f3",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -113,8 +113,17 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
-        "reference" : "4d7aa3c5-0bb3-48b8-8c01-4f8817f64675",
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "0dd4fe21-0ca3-4e2d-8751-827a33e4e1e3",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +132,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "138b0798-3d5e-41ec-842d-535c71dd9204",
+          "reference" : "44cffe83-1ddf-4fab-badf-15e7a65ec3f7",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -143,7 +152,7 @@
                   },
                   "level" : {
                     "type" : "constant",
-                    "value" : "Level 4"
+                    "value" : "Level 3"
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -151,7 +160,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Conference Request"
+                    "value" : "Please enter an explanation on why the conference request was rejected."
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -162,10 +171,70 @@
                     "value" : 12
                   }
                 },
-                "reference" : "23df9743-6433-4ffd-ba7e-c8b25d2abde1",
+                "reference" : "4dee28fd-bfe1-4499-ba55-cc317568152a",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Explanation"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "conferenceRequest.explanation"
+                  }
+                },
+                "reference" : "3d30eaca-f3b1-48af-a2b9-18671e1a1876",
+                "hasValidationError" : false,
+                "id" : "pbTextarea"
               }
             ],
             [
@@ -194,92 +263,10 @@
                     "value" : 12
                   }
                 },
-                "reference" : "4fa3c5be-5af7-4976-94f3-ef3144de7a16",
+                "reference" : "60e45f47-6a61-4bd0-9d5d-d8d58d68d978",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Conference Name"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "conferenceRequest.conferenceName"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
-                        }
-                      },
-                      "reference" : "aae7defd-301c-4dda-8f30-1ba1890483a8",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ],
                   [
                     {
                       "type" : "component",
@@ -356,7 +343,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "f35e65d1-ea32-458c-a4e2-edc507510dbb",
+                      "reference" : "55f9d331-0441-459c-b794-4ebbc4252fdb",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -436,13 +423,93 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "dc63c015-0c07-4563-982c-fd3dfbe52e93",
+                      "reference" : "029bef58-29e3-4498-ad11-05100c028796",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
                     }
                   ],
                   [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 6,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Conference Name"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "conferenceRequest.conferenceName"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        }
+                      },
+                      "reference" : "b4cd4432-03fc-446d-8b0b-12c5697ed213",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    },
                     {
                       "type" : "component",
                       "dimension" : {
@@ -512,56 +579,9 @@
                           "value" : "conferenceRequest.eventDate"
                         }
                       },
-                      "reference" : "f19c6a6b-d3bb-4e33-8fe4-348c491f86b7",
+                      "reference" : "c7658027-b484-45ba-a611-b28881b88041",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
-                      "description" : ""
-                    },
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 6,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 6
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Is Online"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "conferenceRequest.isOnline"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        }
-                      },
-                      "reference" : "e7b1b18a-5612-4798-8839-01cd5b38545c",
-                      "hasValidationError" : false,
-                      "id" : "pbCheckbox",
                       "description" : ""
                     }
                   ],
@@ -569,10 +589,10 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "md" : 12,
+                        "md" : 6,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 12
+                        "lg" : 6
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -641,20 +661,18 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "7cdde868-5463-4ad1-91a8-f736c975e984",
+                      "reference" : "824cf436-da1c-4324-95d4-9ac3f3aa28c0",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
-                    }
-                  ],
-                  [
+                    },
                     {
                       "type" : "component",
                       "dimension" : {
-                        "md" : 12,
+                        "md" : 6,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 12
+                        "lg" : 6
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -665,32 +683,17 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
+                        "disabled" : {
                           "type" : "constant",
                           "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Allowed Budget (RSD)"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "number"
+                          "value" : "Is Online"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -698,103 +701,17 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "conferenceRequest.allowedBudget"
+                          "value" : "conferenceRequest.isOnline"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
                         }
                       },
-                      "reference" : "6bbf50a2-ce47-46b2-9d84-956d4b7cc551",
+                      "reference" : "5853a2f0-b31a-48d1-9234-e5192b93aa85",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbCheckbox",
                       "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Select a technical department user to forward task"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "placeholder" : {
-                          "type" : "interpolation",
-                          "value" : "Select a user"
-                        },
-                        "availableValues" : {
-                          "type" : "expression",
-                          "value" : "techDeptUsers"
-                        },
-                        "displayedKey" : {
-                          "type" : "constant",
-                          "value" : "userName"
-                        },
-                        "returnedKey" : {
-                          "type" : "expression",
-                          "value" : ""
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "selectedUser"
-                        }
-                      },
-                      "reference" : "baf9abfe-2ab5-4d8e-859b-e92d1739890a",
-                      "hasValidationError" : false,
-                      "id" : "pbSelect"
                     }
                   ]
                 ]
@@ -827,7 +744,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "OK"
+                    "value" : "Submit"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -869,32 +786,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable",
-                    "value" : ""
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "9afab14b-cafc-40c3-b4f0-4728b4138865",
+                "reference" : "9d595be6-9e7d-4715-a768-3d375c58bb22",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -946,7 +840,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "88a57252-5639-4a26-b655-ef8ab2303d80",
+                "reference" : "eb9ccf4e-34a8-49fe-aefb-3d2df90f73f8",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -959,14 +853,14 @@
   ],
   "assets" : [
     {
-      "id" : "0030f5bf-1c4b-4eed-b682-90043f648cb6",
+      "id" : "7303d431-a366-422f-a779-f9a84ae5855e",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "3fe32506-e777-4a75-a796-8f58a67da780",
+      "id" : "c1e5e112-eb0c-4377-9470-fa68f0da6dbf",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
@@ -1017,9 +911,8 @@
         "\t\t\tisOnline: $data.conferenceRequest.isOnline !== undefined ? $data.conferenceRequest.isOnline : null,",
         "\t\t\teventDate: $data.conferenceRequest.eventDate !== undefined ? $data.conferenceRequest.eventDate : null,",
         "\t\t\tprice: $data.conferenceRequest.price !== undefined ? $data.conferenceRequest.price : null,",
-        "\t\t\tallowedBudget: $data.conferenceRequest.allowedBudget !== undefined ? $data.conferenceRequest.allowedBudget : null",
-        "\t\t},",
-        "\t\tselectedTechUserId : $data.selectedUser.id",
+        "\t\t\texplanation: $data.conferenceRequest.explanation !== undefined ? $data.conferenceRequest.explanation : null",
+        "\t\t}",
         "\t}",
         "}"
       ],
@@ -1038,33 +931,10 @@
         "id"
       ],
       "exposed" : false
-    },
-    "techDeptUsers" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user?p=0&c=50&f=group_id=104"
-      ],
-      "advancedOptions" : { },
-      "exposed" : false
-    },
-    "techDeptGroup" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/group?f=name=TechnicalDept"
-      ],
-      "advancedOptions" : { },
-      "exposed" : false
-    },
-    "selectedUser" : {
-      "type" : "json",
-      "value" : [
-        "{}"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "80a17b01-e550-4a75-bf18-988247af15d9",
+  "uuid" : "59660228-e69c-4172-8c59-a56be6f500df",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

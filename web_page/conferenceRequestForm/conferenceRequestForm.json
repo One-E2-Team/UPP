@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "conferenceRequestForm",
   "name" : "conferenceRequestForm",
-  "lastUpdate" : 1642175019371,
+  "lastUpdate" : 1642336985999,
   "rows" : [
     [
       {
@@ -583,7 +583,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Price"
+                          "value" : "Price (RSD)"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -603,6 +603,24 @@
                         "required" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "9c1c29d5-0fbf-4c01-9b9b-08557f8742c0",

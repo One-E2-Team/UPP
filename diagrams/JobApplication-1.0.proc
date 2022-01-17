@@ -1274,7 +1274,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_77v90XYNEeyU9MZtNVXQsA" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_77uvsXYNEeyU9MZtNVXQsA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_77uvsnYNEeyU9MZtNVXQsA" points="[50, -1, -245, 1048]$[301, -1, 6, 1048]$[301, -1014, 6, 35]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_77uvsnYNEeyU9MZtNVXQsA" points="[50, -1, -245, 1070]$[301, -1, 6, 1070]$[301, -1036, 6, 35]"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_9hCEIHYOEeyU9MZtNVXQsA" type="4001" element="_9g_A0HYOEeyU9MZtNVXQsA" source="_9gpCkHYOEeyU9MZtNVXQsA" target="_nwHzcHWIEeytUNvVPSzciA" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_9hCEI3YOEeyU9MZtNVXQsA" type="6001">

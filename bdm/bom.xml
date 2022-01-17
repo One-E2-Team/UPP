@@ -77,6 +77,15 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.JobPosting">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="description" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.Storage">
             <fields>
                 <relationField type="AGGREGATION" reference="com.company.model.EquipmentCategory" fetchType="LAZY" name="category" nullable="true" collection="false"/>

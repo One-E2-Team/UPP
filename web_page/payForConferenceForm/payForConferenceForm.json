@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.2",
-  "id" : "grantBudgetForm",
-  "name" : "grantBudgetForm",
-  "lastUpdate" : 1642435857790,
+  "id" : "payForConferenceForm",
+  "name" : "payForConferenceForm",
+  "lastUpdate" : 1642433211681,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "96d18483-5481-4a81-8c49-7d4414f18796",
+        "reference" : "91c38257-1dde-4fee-9548-911e831eb7dd",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "4519f723-2d26-4e65-9735-c4ee07593f6a",
+              "reference" : "d2725468-2ff2-4162-800e-29053b72e166",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "35addb8f-c382-48cd-966a-15f282cb2ecb",
+              "reference" : "85cc3ea4-d59d-41dc-a199-b8b4abadbfdf",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "bae80d13-3e9c-4a6e-86b2-2997a26ac403",
+        "reference" : "fd7120d6-2b50-44ac-a860-f0d4ca68aa19",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "0cda111a-1a51-4b49-bdb6-d7947bd17b48",
+          "reference" : "79f3a6c1-1c5c-457d-b786-5c76045042d5",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -151,7 +151,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Please grant allowed budget for transportation and accommodation for a live conference."
+                    "value" : "Pay the Conference Request"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -162,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "095e22d7-34fd-4263-b4ed-03478147d355",
+                "reference" : "32b67d85-9b33-4038-8250-658ce7984eb9",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -194,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "25082150-0167-49ac-89f7-eb9294494e2f",
+                "reference" : "2ab472f3-6075-4fab-a152-76c46cb93e7e",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -205,166 +205,7 @@
                         "md" : 12,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 6
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Allowed budget for accomodation (RSD)"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "number"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "conferenceRequest.allowedBudgetAccomodation"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
-                        }
-                      },
-                      "reference" : "49cca747-17e0-47f7-96d0-b43225fd868f",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
                         "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Allowed budget for transportation (RSD)"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "placeholder" : {
-                          "type" : "interpolation"
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "conferenceRequest.allowedBudgetTransportation"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "number"
-                        },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
-                          "type" : "constant",
-                          "value" : 1
-                        }
-                      },
-                      "reference" : "7f0c6627-b3fd-4890-97ce-f18c85198090",
-                      "hasValidationError" : false,
-                      "id" : "pbInput"
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 4
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -433,7 +274,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "d4ad61bc-f650-4734-b67f-c91bca43ddbf",
+                      "reference" : "ee36d5b4-0773-446e-8cc8-a1aaa3989ece",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -515,7 +356,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "a2484ce0-07fa-420a-96a9-1d4141e3d896",
+                      "reference" : "7139767d-c065-4a87-a1e0-8317bffabcc9",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -595,7 +436,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "b52c2834-91de-4100-a0d4-a60d196d94d6",
+                      "reference" : "9213ab89-4f9a-43da-8c93-8df46df8e228",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -608,7 +449,7 @@
                         "md" : 6,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 6
+                        "lg" : 4
                       },
                       "propertyValues" : {
                         "hidden" : {
@@ -671,7 +512,7 @@
                           "value" : "conferenceRequest.eventDate"
                         }
                       },
-                      "reference" : "f4a44c0e-4c23-4c37-9d68-2467e1c77f77",
+                      "reference" : "af67b643-083e-4f28-a018-49f6a0f11142",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -682,7 +523,7 @@
                         "md" : 6,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 6
+                        "lg" : 4
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -711,7 +552,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Price (RSD)"
+                          "value" : "Price"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -751,7 +592,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "6c475727-9a9f-4fdd-a4ed-edbfb160b306",
+                      "reference" : "25e48cd6-a924-484f-a8a5-a3a7141d6b90",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -787,7 +628,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "PAY"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -829,9 +670,32 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
-                "reference" : "b3b531bb-60ca-47ab-9c23-1694342d6725",
+                "reference" : "e8086d32-7af9-453b-9138-e1b9e9f4eecf",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -883,7 +747,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "ebf4eb9a-90f6-4ec4-a082-e176acff2e07",
+                "reference" : "c0a69406-13c7-4ede-a960-cf95440f08ea",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -896,14 +760,14 @@
   ],
   "assets" : [
     {
-      "id" : "2d076a64-c16b-4fb4-81c2-8631e7c5d8f7",
+      "id" : "1edfddd7-eaaf-4c94-97b5-e487f86789f0",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "1e4f6943-c828-44d8-a3d5-83c96530cba2",
+      "id" : "d6482ee8-65db-48c1-8e40-f4a5b1c39a1d",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -917,7 +781,6 @@
       "value" : [
         "../{{context.conferenceRequest_ref.link}}"
       ],
-      "advancedOptions" : { },
       "exposed" : false
     },
     "task" : {
@@ -954,10 +817,7 @@
         "\t\t\tconferenceName: $data.conferenceRequest.conferenceName !== undefined ? $data.conferenceRequest.conferenceName : null,",
         "\t\t\tisOnline: $data.conferenceRequest.isOnline !== undefined ? $data.conferenceRequest.isOnline : null,",
         "\t\t\teventDate: $data.conferenceRequest.eventDate !== undefined ? $data.conferenceRequest.eventDate : null,",
-        "\t\t\tprice: $data.conferenceRequest.price !== undefined ? $data.conferenceRequest.price : null,",
-        "\t\t\tallowedBudgetAccomodation: $data.conferenceRequest.allowedBudgetAccomodation !== undefined ? $data.conferenceRequest.allowedBudgetAccomodation : null,",
-        "\t\t    allowedBudgetTransportation: $data.conferenceRequest.allowedBudgetTransportation !== undefined ? $data.conferenceRequest.allowedBudgetTransportation : null",
-        "\t\t    ",
+        "\t\t\tprice: $data.conferenceRequest.price !== undefined ? $data.conferenceRequest.price : null",
         "\t\t}",
         "\t}",
         "}"
@@ -980,7 +840,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "56a53a86-33a1-4e00-91e6-417a1afd17fd",
+  "uuid" : "4a51f039-b620-416e-8fee-4eb535bbe3ad",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

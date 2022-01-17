@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
     <businessObjects>
+        <businessObject qualifiedName="com.company.model.Accomodation">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="FLOAT" length="255" name="price" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="link" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.ConferenceRequest">
             <fields>
                 <field type="STRING" length="255" name="employeeName" nullable="true" collection="false"/>
@@ -11,7 +22,12 @@
                 <field type="STRING" length="255" name="price" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="approved" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="explanation" nullable="true" collection="false"/>
-                <field type="FLOAT" length="255" name="allowedBudget" nullable="true" collection="false"/>
+                <field type="FLOAT" length="255" name="allowedBudgetAccomodation" nullable="true" collection="false"/>
+                <field type="FLOAT" length="255" name="allowedBudgetTransportation" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Accomodation" fetchType="EAGER" name="accomodationOptions" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Transportation" fetchType="EAGER" name="transportationOptions" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Accomodation" fetchType="EAGER" name="acceptedAccomodation" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Transportation" fetchType="EAGER" name="acceptedTransportation" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -66,6 +82,17 @@
                 <relationField type="AGGREGATION" reference="com.company.model.EquipmentCategory" fetchType="LAZY" name="category" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="amount" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="type" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Transportation">
+            <fields>
+                <field type="FLOAT" length="255" name="price" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="link" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="shipper" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

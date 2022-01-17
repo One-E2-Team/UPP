@@ -54,8 +54,8 @@
               <referencedElements xmi:type="process:Data" xmi:id="_3JHGcHbXEeyJk6A_V5dMJQ" name="enoughEquipment" dataType="_b0xk9XbSEeyJk6A_V5dMJQ"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_xdY5wnbXEeyJk6A_V5dMJQ" name="isEnoughEquipment()" content="def storageItems = storageDAO.findByType(equipmentItem.type, 0, 100);&#xD;&#xA;def storageItem = storageItems.find&#xD;&#xA;&#x9;{it.category.name.equals(equipmentItem.category.name)};&#xD;&#xA;&#x9;&#xD;&#xA;return storageItem != null &amp;&amp; storageItem.amount >= equipmentItem.amount;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_5EzXEHbXEeyJk6A_V5dMJQ" name="equipmentItem" dataType="_b0xk_XbSEeyJk6A_V5dMJQ" className="com.company.model.EquipmentItem"/>
-              <referencedElements xmi:type="expression:Expression" xmi:id="_5EzXEXbXEeyJk6A_V5dMJQ" name="storageDAO" content="storageDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.StorageDAO" returnTypeFixed="true"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_CgmUgHfHEeyrfeqi_TQ-cA" name="equipmentItem" dataType="_b0xk_XbSEeyJk6A_V5dMJQ" className="com.company.model.EquipmentItem"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_CgmUgXfHEeyrfeqi_TQ-cA" name="storageDAO" content="storageDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.StorageDAO" returnTypeFixed="true"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_xdY5w3bXEeyJk6A_V5dMJQ" type="ASSIGNMENT"/>
           </operations>
@@ -93,7 +93,7 @@
             <condition xmi:type="expression:Expression" xmi:id="_2fF04HbeEeyJk6A_V5dMJQ" name="1 Days 00:00:00" content="86400000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_eLR6dnbYEeyJk6A_V5dMJQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_J-aGwHb_Eey6wP-aeZVbgg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_zZrhEHe4Eeyrfeqi_TQ-cA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_eLR6dXbYEeyJk6A_V5dMJQ"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_eLR6eHbYEeyJk6A_V5dMJQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -167,7 +167,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_vsvqcXb2Eey6wP-aeZVbgg" name="0" content="0" returnType="java.lang.Integer"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_b0xk3XbSEeyJk6A_V5dMJQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_J-aGwXb_Eey6wP-aeZVbgg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_zZrhEXe4Eeyrfeqi_TQ-cA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_b0xk33bSEeyJk6A_V5dMJQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_b0xk4HbSEeyJk6A_V5dMJQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

@@ -96,7 +96,6 @@
                 <field type="DATE" length="255" name="submissionTimestamp" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="assessedById" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="approved" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="approvedByManager" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

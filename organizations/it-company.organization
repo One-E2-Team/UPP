@@ -209,6 +209,9 @@
     <role name="CEO">
       <displayName>CEO</displayName>
     </role>
+    <role name="Employee">
+      <displayName>Employee</displayName>
+    </role>
   </roles>
   <groups>
     <group name="it-company">
@@ -245,7 +248,7 @@
     </membership>
     <membership>
       <userName>hr.manager</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -256,7 +259,7 @@
     </membership>
     <membership>
       <userName>hr.member1</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -267,7 +270,7 @@
     </membership>
     <membership>
       <userName>hr.member2</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -278,7 +281,7 @@
     </membership>
     <membership>
       <userName>techdept.manager</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -295,12 +298,12 @@
     </membership>
     <membership>
       <userName>techdept.member2</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
       <userName>techdept.member1</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -311,7 +314,7 @@
     </membership>
     <membership>
       <userName>findept.manager</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -322,7 +325,7 @@
     </membership>
     <membership>
       <userName>findept.member1</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -333,7 +336,7 @@
     </membership>
     <membership>
       <userName>findept.member2</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -374,32 +377,32 @@
     </membership>
     <membership>
       <userName>dev.senior1</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
       <userName>dev.senior2</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
       <userName>dev.member1</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
       <userName>dev.member2</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
       <userName>dev.member3</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
       <userName>dev.member4</userName>
-      <roleName>Member</roleName>
+      <roleName>Employee</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -409,7 +412,7 @@
     </membership>
     <membership>
       <userName>ceo</userName>
-      <roleName>Member</roleName>
+      <roleName>CEO</roleName>
       <groupName>it-company</groupName>
     </membership>
     <membership>
@@ -421,6 +424,11 @@
       <userName>supplier2</userName>
       <roleName>Member</roleName>
       <groupName>Supplier</groupName>
+    </membership>
+    <membership>
+      <userName>ceo</userName>
+      <roleName>Employee</roleName>
+      <groupName>it-company</groupName>
     </membership>
   </memberships>
 </organization:Organization>

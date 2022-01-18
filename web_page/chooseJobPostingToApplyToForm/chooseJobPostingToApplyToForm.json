@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "chooseJobPostingToApplyToForm",
   "name" : "chooseJobPostingToApplyToForm",
-  "lastUpdate" : 1642459105357,
+  "lastUpdate" : 1642508449108,
   "rows" : [
     [
       {
@@ -57,7 +57,7 @@
                   },
                   "required" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : true
                   },
                   "labelHidden" : {
                     "type" : "constant",
@@ -177,7 +177,7 @@
                   },
                   "hidden" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : true
                   },
                   "labelPosition" : {
                     "type" : "constant",

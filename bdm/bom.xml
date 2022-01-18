@@ -33,6 +33,15 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.Education">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="degree" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.EquipmentCategory">
             <fields>
                 <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
@@ -72,6 +81,22 @@
                 <field type="STRING" length="255" name="cancelExplanation" nullable="true" collection="false"/>
                 <field type="FLOAT" length="255" name="allowedBudget" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="tender" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.JobApplication">
+            <fields>
+                <relationField type="AGGREGATION" reference="com.company.model.JobPosting" fetchType="LAZY" name="jobPosting" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Education" fetchType="LAZY" name="educationDegree" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="cv" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="motivationalLetter" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="candidateUserId" nullable="true" collection="false"/>
+                <field type="DATE" length="255" name="submissionTimestamp" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="assessedById" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="approved" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="approvedByManager" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "cvSubmissionForm",
   "name" : "cvSubmissionForm",
-  "lastUpdate" : 1642515879022,
+  "lastUpdate" : 1642542789241,
   "rows" : [
     [
       {
@@ -113,7 +113,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "6abcd269-55b5-40d9-9c0d-3128600ea6f3",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -302,7 +311,8 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -325,10 +335,10 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "md" : 12,
+                        "md" : 6,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 12
+                        "lg" : 6
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -353,7 +363,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Cv"
+                          "value" : "CV"
                         },
                         "placeholder" : {
                           "type" : "constant",
@@ -384,49 +394,14 @@
                       "hasValidationError" : false,
                       "id" : "pbUpload",
                       "description" : ""
-                    }
-                  ]
-                ]
-              }
-            ],
-            [
-              {
-                "type" : "container",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable"
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "8cb14b45-b787-4654-a995-2713b704243b",
-                "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
+                    },
                     {
                       "type" : "component",
                       "dimension" : {
-                        "md" : 12,
+                        "md" : 6,
                         "sm" : 12,
                         "xs" : 12,
-                        "lg" : 12
+                        "lg" : 6
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -472,6 +447,10 @@
                         "url" : {
                           "type" : "constant",
                           "value" : "../API/formFileUpload"
+                        },
+                        "errorContent" : {
+                          "type" : "variable",
+                          "value" : ""
                         }
                       },
                       "reference" : "49ecf092-326a-4b80-beb3-3b18eb58852f",

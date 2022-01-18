@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "hrMemberApplicationAssessmentForm",
   "name" : "hrMemberApplicationAssessmentForm",
-  "lastUpdate" : 1642537417888,
+  "lastUpdate" : 1642544125062,
   "rows" : [
     [
       {
@@ -353,7 +353,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "57dc2cb0-260e-4128-8324-2c00c9db792f",
+                      "reference" : "09ca7bb6-7ca3-410b-bac4-a85bdeb97a65",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     },
@@ -428,7 +428,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "cbfdd88c-821a-482e-bcd0-842a4ca66064",
+                      "reference" : "e50d4a3c-b97b-419c-91b0-1bc110b9ae43",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     }
@@ -505,7 +505,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "8df5ed99-4874-401b-bf56-c1fca9100a41",
+                      "reference" : "8a85b90b-5bdb-4f69-9f7f-1e11126b04f3",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     }
@@ -582,7 +582,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "696c56b8-96b7-4ffb-b7b0-ffd044f61bb9",
+                      "reference" : "65569c75-4526-438a-af4e-242ae7d89963",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     }
@@ -659,7 +659,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "f4bfe9d5-08b0-40d4-a35c-f131be44227b",
+                      "reference" : "d56f28e3-8275-4049-8c6e-1e485a3d056b",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     },
@@ -734,7 +734,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "c641b3e5-ef06-4bb3-ad29-db4f179e1be7",
+                      "reference" : "3b954013-f63f-4a31-bf9d-359b13663af1",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     },
@@ -809,7 +809,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "bfb41f14-3942-4507-9b08-2430dc3e5e34",
+                      "reference" : "17361ae4-1557-44b0-82d0-bc5c73752e70",
                       "hasValidationError" : false,
                       "id" : "pbInput"
                     }
@@ -832,9 +832,42 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "label" : {
+                        "text" : {
                           "type" : "interpolation",
                           "value" : "Download CV"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "URL"
+                        },
+                        "targetUrl" : {
+                          "type" : "expression",
+                          "value" : "\"/bonita/portal/\" + context.cvDoc_ref.url"
+                        },
+                        "pageToken" : {
+                          "type" : "constant"
+                        },
+                        "processName" : {
+                          "type" : "constant"
+                        },
+                        "processVersion" : {
+                          "type" : "constant"
+                        },
+                        "taskId" : {
+                          "type" : "constant"
+                        },
+                        "caseId" : {
+                          "type" : "constant"
+                        },
+                        "target" : {
+                          "type" : "constant",
+                          "value" : "_self"
+                        },
+                        "appToken" : {
+                          "type" : "constant"
+                        },
+                        "urlParams" : {
+                          "type" : "constant"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -843,15 +876,11 @@
                         "buttonStyle" : {
                           "type" : "constant",
                           "value" : "success"
-                        },
-                        "formInput" : {
-                          "type" : "variable",
-                          "value" : "formInput.cv"
                         }
                       },
-                      "reference" : "7d1bbd52-8baf-4ed6-9924-d0abca29b40f",
+                      "reference" : "7ddb7e9a-c545-4968-8df7-c500e50f56cc",
                       "hasValidationError" : false,
-                      "id" : "pbSaveButton"
+                      "id" : "pbLink"
                     },
                     {
                       "type" : "component",
@@ -870,9 +899,42 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "label" : {
+                        "text" : {
                           "type" : "interpolation",
                           "value" : "Download Motivational Letter"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "URL"
+                        },
+                        "targetUrl" : {
+                          "type" : "expression",
+                          "value" : "\"/bonita/portal/\" + context.letterDoc_ref.url"
+                        },
+                        "pageToken" : {
+                          "type" : "constant"
+                        },
+                        "processName" : {
+                          "type" : "constant"
+                        },
+                        "processVersion" : {
+                          "type" : "constant"
+                        },
+                        "taskId" : {
+                          "type" : "constant"
+                        },
+                        "caseId" : {
+                          "type" : "constant"
+                        },
+                        "target" : {
+                          "type" : "constant",
+                          "value" : "_self"
+                        },
+                        "appToken" : {
+                          "type" : "constant"
+                        },
+                        "urlParams" : {
+                          "type" : "constant"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -881,15 +943,11 @@
                         "buttonStyle" : {
                           "type" : "constant",
                           "value" : "success"
-                        },
-                        "formInput" : {
-                          "type" : "variable",
-                          "value" : "formInput.letter"
                         }
                       },
-                      "reference" : "89448d2b-3c79-4c3d-9cbe-545e33c98d3e",
+                      "reference" : "6593106c-2873-4e59-8091-934ac4690c7b",
                       "hasValidationError" : false,
-                      "id" : "pbSaveButton"
+                      "id" : "pbLink"
                     }
                   ],
                   [

@@ -276,7 +276,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_p4w_KHWBEeytUNvVPSzciA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_p4w_J3WBEeytUNvVPSzciA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_p4w_KnWBEeytUNvVPSzciA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_3aKV0HkqEeyYBICM4YQWwA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_L2LisHlaEeyWbphJwgRhEg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_p4w_KXWBEeytUNvVPSzciA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_p4w_LHWBEeytUNvVPSzciA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -357,7 +357,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_T07FxXWHEeytUNvVPSzciA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_T07FxHWHEeytUNvVPSzciA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_T07Fx3WHEeytUNvVPSzciA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_3aKV0XkqEeyYBICM4YQWwA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_L2LisXlaEeyWbphJwgRhEg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_T07FxnWHEeytUNvVPSzciA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_T07FyXWHEeytUNvVPSzciA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -392,7 +392,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_b3UJR3YTEeyU9MZtNVXQsA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_b3UJRnYTEeyU9MZtNVXQsA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_b3UJSXYTEeyU9MZtNVXQsA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_3aKV0nkqEeyYBICM4YQWwA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_L2LisnlaEeyWbphJwgRhEg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_b3UJSHYTEeyU9MZtNVXQsA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_b3UJS3YTEeyU9MZtNVXQsA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -1393,7 +1393,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_T_cOF3YTEeyU9MZtNVXQsA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_T_cOFnYTEeyU9MZtNVXQsA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_T_cOGXYTEeyU9MZtNVXQsA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_3aKV03kqEeyYBICM4YQWwA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_L2Lis3laEeyWbphJwgRhEg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_T_cOGHYTEeyU9MZtNVXQsA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_T_cOG3YTEeyU9MZtNVXQsA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -1698,23 +1698,19 @@
             <users xmi:type="actormapping:Users" xmi:id="_bC-0SnVNEeytUNvVPSzciA"/>
           </actorMapping>
           <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_cREHQHVpEeytUNvVPSzciA" name="hrmember">
-            <groups xmi:type="actormapping:Groups" xmi:id="_cREHQXVpEeytUNvVPSzciA">
-              <group>/it-company/HR</group>
-            </groups>
-            <memberships xmi:type="actormapping:Membership" xmi:id="_cREHQnVpEeytUNvVPSzciA"/>
-            <roles xmi:type="actormapping:Roles" xmi:id="_cREHQ3VpEeytUNvVPSzciA">
-              <role>Member</role>
-            </roles>
+            <groups xmi:type="actormapping:Groups" xmi:id="_cREHQXVpEeytUNvVPSzciA"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_cREHQnVpEeytUNvVPSzciA">
+              <membership xmi:type="actormapping:MembershipType" xmi:id="_YF6kEHlcEeyWbphJwgRhEg" group="/it-company/HR" role="Member"/>
+            </memberships>
+            <roles xmi:type="actormapping:Roles" xmi:id="_cREHQ3VpEeytUNvVPSzciA"/>
             <users xmi:type="actormapping:Users" xmi:id="_cREHRHVpEeytUNvVPSzciA"/>
           </actorMapping>
           <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_1n0qcHWFEeytUNvVPSzciA" name="hrmanager">
-            <groups xmi:type="actormapping:Groups" xmi:id="_1n0qcXWFEeytUNvVPSzciA">
-              <group>/it-company/HR</group>
-            </groups>
-            <memberships xmi:type="actormapping:Membership" xmi:id="_1n0qcnWFEeytUNvVPSzciA"/>
-            <roles xmi:type="actormapping:Roles" xmi:id="_1n0qc3WFEeytUNvVPSzciA">
-              <role>Manager</role>
-            </roles>
+            <groups xmi:type="actormapping:Groups" xmi:id="_1n0qcXWFEeytUNvVPSzciA"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_1n0qcnWFEeytUNvVPSzciA">
+              <membership xmi:type="actormapping:MembershipType" xmi:id="_YF7LIHlcEeyWbphJwgRhEg" group="/it-company/HR" role="Manager"/>
+            </memberships>
+            <roles xmi:type="actormapping:Roles" xmi:id="_1n0qc3WFEeytUNvVPSzciA"/>
             <users xmi:type="actormapping:Users" xmi:id="_1n0qdHWFEeytUNvVPSzciA"/>
           </actorMapping>
           <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_x5PqcHWGEeytUNvVPSzciA" name="employee">

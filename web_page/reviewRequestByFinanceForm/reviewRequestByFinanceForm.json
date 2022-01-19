@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "reviewRequestByFinanceForm",
   "name" : "reviewRequestByFinanceForm",
-  "lastUpdate" : 1642436120129,
+  "lastUpdate" : 1642618840952,
   "rows" : [
     [
       {
@@ -1119,7 +1119,7 @@
     "techDeptUsers" : {
       "type" : "url",
       "value" : [
-        "../API/identity/user?p=0&c=50&f=group_id=104"
+        "../API/identity/user?p=0&c=50&f=group_id={{techDeptGroup[0].id}}"
       ],
       "advancedOptions" : { },
       "exposed" : false

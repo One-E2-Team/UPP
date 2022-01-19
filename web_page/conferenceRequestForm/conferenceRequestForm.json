@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "conferenceRequestForm",
   "name" : "conferenceRequestForm",
-  "lastUpdate" : 1642336985999,
+  "lastUpdate" : 1642618561559,
   "rows" : [
     [
       {
@@ -590,7 +590,7 @@
                         },
                         "type" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "number"
                         },
                         "dimension" : {
                           "type" : "constant",

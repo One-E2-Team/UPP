@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "reviewApplicationForm",
   "name" : "reviewApplicationForm",
-  "lastUpdate" : 1642547129346,
+  "lastUpdate" : 1642598531642,
   "rows" : [
     [
       {
@@ -2138,7 +2138,7 @@
                         },
                         "hidden" : {
                           "type" : "expression",
-                          "value" : "!application.approved"
+                          "value" : "application.approved == false"
                         }
                       },
                       "reference" : "21f20943-19d3-4005-b8c3-528f21d8f6cc",
@@ -2201,17 +2201,20 @@
                                   "value" : "Select an option"
                                 },
                                 "availableValues" : {
-                                  "type" : "constant"
+                                  "type" : "expression",
+                                  "value" : "sendevs"
                                 },
                                 "displayedKey" : {
-                                  "type" : "constant"
+                                  "type" : "constant",
+                                  "value" : "firstname + \" \" + lastname"
                                 },
                                 "returnedKey" : {
-                                  "type" : "constant"
+                                  "type" : "constant",
+                                  "value" : "id"
                                 },
                                 "value" : {
                                   "type" : "variable",
-                                  "value" : ""
+                                  "value" : "application.interviewerDevSenior"
                                 }
                               },
                               "reference" : "5f918772-7c16-4641-8a8b-6d477b38093f",
@@ -2266,17 +2269,20 @@
                                   "value" : "Select an option"
                                 },
                                 "availableValues" : {
-                                  "type" : "constant"
+                                  "type" : "expression",
+                                  "value" : "hrmembers"
                                 },
                                 "displayedKey" : {
-                                  "type" : "constant"
+                                  "type" : "constant",
+                                  "value" : "firstname + \" \" + lastname"
                                 },
                                 "returnedKey" : {
-                                  "type" : "constant"
+                                  "type" : "constant",
+                                  "value" : "id"
                                 },
                                 "value" : {
                                   "type" : "variable",
-                                  "value" : ""
+                                  "value" : "application.interviewerHR"
                                 }
                               },
                               "reference" : "40fbed38-50c7-4004-988e-1698e157e70d",
@@ -2331,17 +2337,20 @@
                                   "value" : "Select an option"
                                 },
                                 "availableValues" : {
-                                  "type" : "constant"
+                                  "type" : "expression",
+                                  "value" : "employees"
                                 },
                                 "displayedKey" : {
-                                  "type" : "constant"
+                                  "type" : "constant",
+                                  "value" : "firstname + \" \" + lastname"
                                 },
                                 "returnedKey" : {
-                                  "type" : "constant"
+                                  "type" : "constant",
+                                  "value" : "id"
                                 },
                                 "value" : {
                                   "type" : "variable",
-                                  "value" : ""
+                                  "value" : "application.interviewerEmployeeLang"
                                 }
                               },
                               "reference" : "46f133ff-7fbf-404c-bd6e-c3357b0b9e68",
@@ -2631,7 +2640,11 @@
       "value" : [
         "../API/identity/personalcontactdata/{{application.candidateUserId}}"
       ],
-      "advancedOptions" : { },
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
       "exposed" : false
     },
     "hruser" : {
@@ -2647,6 +2660,82 @@
       "value" : [
         "return $data.hruser.firstname + \" \" + $data.hruser.lastname;"
       ],
+      "exposed" : false
+    },
+    "sendevs" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=enabled=true&f=group_id={{devgroup[0].id}}&f=role_id={{seniorrole[0].id}}"
+      ],
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
+      "exposed" : false
+    },
+    "devgroup" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/group?f=name=Developer"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "employeegroup" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/group?f=name=it-company"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "employees" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=enabled=true&f=group_id={{employeegroup[0].id}}&f=role_id={{employeerole[0].id}}"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "hrmembers" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=enabled=true&f=group_id={{hrmembergroup[0].id}}&f=role_id={{memberrole[0].id}}"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "hrmembergroup" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/group?f=name=HR"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "seniorrole" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/role?f=name=Senior"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "memberrole" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/role?f=name=Member"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "employeerole" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/role?f=name=Employee"
+      ],
+      "advancedOptions" : { },
       "exposed" : false
     }
   },

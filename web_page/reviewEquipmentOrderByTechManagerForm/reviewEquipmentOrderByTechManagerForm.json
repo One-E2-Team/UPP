@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "reviewEquipmentOrderByTechManagerForm",
   "name" : "reviewEquipmentOrderByTechManagerForm",
-  "lastUpdate" : 1642615223446,
+  "lastUpdate" : 1643051374923,
   "rows" : [
     [
       {
@@ -1208,7 +1208,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Selected Tech Member Id"
+                          "value" : "Select tech member"
                         },
                         "labelPosition" : {
                           "type" : "constant",

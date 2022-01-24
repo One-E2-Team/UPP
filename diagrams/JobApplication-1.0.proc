@@ -897,6 +897,30 @@
               <operator xmi:type="expression:Operator" xmi:id="_UIv0vXh8EeyNJKN7_FJOOg" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_SWxj8H1iEeyei4jnMeFyBw" name="setinterviews" definitionId="scripting-groovy-script" event="ON_FINISH" definitionVersion="1.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_SWxj8X1iEeyei4jnMeFyBw" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_SWxj8n1iEeyei4jnMeFyBw" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_SWxj831iEeyei4jnMeFyBw" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_SWxj9H1iEeyei4jnMeFyBw" key="variables">
+                <expression xmi:type="expression:Expression" xmi:id="_SWxj9X1iEeyei4jnMeFyBw" returnType="java.util.List" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_SWxj9n1iEeyei4jnMeFyBw" key="fakeScriptExpression">
+                <expression xmi:type="expression:Expression" xmi:id="_SWxj931iEeyei4jnMeFyBw" name="newScript()" content="return application.getInterviews();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SWxj-H1iEeyei4jnMeFyBw" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_SWxj-X1iEeyei4jnMeFyBw">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_SWxj-n1iEeyei4jnMeFyBw" name="interviews" content="interviews" type="TYPE_VARIABLE" returnType="java.util.List">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SWxj-31iEeyei4jnMeFyBw" name="interviews" multiple="true" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.Interview"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_SWxj_H1iEeyei4jnMeFyBw" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
+                <referencedElements xmi:type="definition:Output" xmi:id="_SWxj_X1iEeyei4jnMeFyBw" name="result" type="java.lang.Object"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_SWxj_n1iEeyei4jnMeFyBw" type="ASSIGNMENT"/>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_kUJnV3izEeyNJKN7_FJOOg">
             <leftOperand xmi:type="expression:Expression" xmi:id="_kUJnWHizEeyNJKN7_FJOOg" name="application" content="application" type="TYPE_VARIABLE" returnType="com.company.model.JobApplication">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kUJnWXizEeyNJKN7_FJOOg" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
@@ -1019,6 +1043,16 @@
             <operator xmi:type="expression:Operator" xmi:id="_kUKOgnizEeyNJKN7_FJOOg" type="JAVA_METHOD" expression="setInterviewerEmployeeLang">
               <inputTypes>java.lang.Long</inputTypes>
             </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_w79aAH1hEeyei4jnMeFyBw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_w79aAX1hEeyei4jnMeFyBw" name="application" content="application" type="TYPE_VARIABLE" returnType="com.company.model.JobApplication">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_xfrLEH1hEeyei4jnMeFyBw" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_w79aAn1hEeyei4jnMeFyBw" name="newScript()" content="import com.company.model.Interview&#xD;&#xA;&#xD;&#xA;def devSeniorInt = applicationInput?.interviewerDevSenior?.trim() ? applicationInput.interviewerDevSenior.toLong() : null;&#xD;&#xA;def hrMemebrInt = applicationInput?.interviewerHR?.trim() ? applicationInput.interviewerHR.toLong() : null;&#xD;&#xA;def employeeLangInt = applicationInput?.interviewerEmployeeLang?.trim() ? applicationInput.interviewerEmployeeLang.toLong() : null;&#xD;&#xA;&#xD;&#xA;if(devSeniorInt==null || hrMemebrInt==null || employeeLangInt==null){&#xD;&#xA;&#x9;application.addToInterviews(new Interview(interviewerUserId: devSeniorInt));&#xD;&#xA;&#x9;application.addToInterviews(new Interview(interviewerUserId: hrMemebrInt));&#xD;&#xA;&#x9;application.addToInterviews(new Interview(interviewerUserId: employeeLangInt));&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return application;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.JobApplication">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_yvDvUH1hEeyei4jnMeFyBw" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_yvDvUX1hEeyei4jnMeFyBw" name="applicationInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_w79aA31hEeyei4jnMeFyBw" type="ASSIGNMENT"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_XCUaYnV9EeytUNvVPSzciA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_XCUaY3V9EeytUNvVPSzciA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -1191,6 +1225,30 @@
               </parameters>
             </configuration>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_LWG9kH1iEeyei4jnMeFyBw" name="serinterviews" definitionId="scripting-groovy-script" event="ON_FINISH" definitionVersion="1.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_LWG9kX1iEeyei4jnMeFyBw" definitionId="scripting-groovy-script" version="1.0.1" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LWG9kn1iEeyei4jnMeFyBw" key="script">
+                <expression xmi:type="expression:Expression" xmi:id="_LWG9k31iEeyei4jnMeFyBw" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LWG9lH1iEeyei4jnMeFyBw" key="variables">
+                <expression xmi:type="expression:Expression" xmi:id="_LWG9lX1iEeyei4jnMeFyBw" returnType="java.util.List" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LWG9ln1iEeyei4jnMeFyBw" key="fakeScriptExpression">
+                <expression xmi:type="expression:Expression" xmi:id="_LWG9l31iEeyei4jnMeFyBw" name="newScript()" content="return application.getInterviews();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_LWG9mH1iEeyei4jnMeFyBw" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_LWG9mX1iEeyei4jnMeFyBw">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_LWG9mn1iEeyei4jnMeFyBw" name="interviews" content="interviews" type="TYPE_VARIABLE" returnType="java.util.List">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_LWG9m31iEeyei4jnMeFyBw" name="interviews" multiple="true" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.Interview"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_LWG9nH1iEeyei4jnMeFyBw" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
+                <referencedElements xmi:type="definition:Output" xmi:id="_LWG9nX1iEeyei4jnMeFyBw" name="result" type="java.lang.Object"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_LWG9nn1iEeyei4jnMeFyBw" type="ASSIGNMENT"/>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_F9-FYXiuEeyNJKN7_FJOOg">
             <leftOperand xmi:type="expression:Expression" xmi:id="_F9-FYniuEeyNJKN7_FJOOg" name="application" content="application" type="TYPE_VARIABLE" returnType="com.company.model.JobApplication">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_F9-FY3iuEeyNJKN7_FJOOg" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
@@ -1314,6 +1372,16 @@
               <inputTypes>java.lang.Long</inputTypes>
             </operator>
           </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_jZxnYH1hEeyei4jnMeFyBw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_jZxnYX1hEeyei4jnMeFyBw" name="application" content="application" type="TYPE_VARIABLE" returnType="com.company.model.JobApplication">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kDAKkH1hEeyei4jnMeFyBw" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_jZxnYn1hEeyei4jnMeFyBw" name="newScript()" content="import com.company.model.Interview&#xD;&#xA;&#xD;&#xA;def devSeniorInt = applicationInput?.interviewerDevSenior?.trim() ? applicationInput.interviewerDevSenior.toLong() : null;&#xD;&#xA;def hrMemebrInt = applicationInput?.interviewerHR?.trim() ? applicationInput.interviewerHR.toLong() : null;&#xD;&#xA;def employeeLangInt = applicationInput?.interviewerEmployeeLang?.trim() ? applicationInput.interviewerEmployeeLang.toLong() : null;&#xD;&#xA;&#xD;&#xA;if(devSeniorInt==null || hrMemebrInt==null || employeeLangInt==null){&#xD;&#xA;&#x9;application.addToInterviews(new Interview(interviewerUserId: devSeniorInt));&#xD;&#xA;&#x9;application.addToInterviews(new Interview(interviewerUserId: hrMemebrInt));&#xD;&#xA;&#x9;application.addToInterviews(new Interview(interviewerUserId: employeeLangInt));&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return application;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.JobApplication">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_wPtYAH1hEeyei4jnMeFyBw" name="applicationInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_wPtYAX1hEeyei4jnMeFyBw" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_jZxnY31hEeyei4jnMeFyBw" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_UQxRFHWDEeytUNvVPSzciA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_UQx4IHWDEeytUNvVPSzciA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_UQx4IXWDEeytUNvVPSzciA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -1410,33 +1478,51 @@
         </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_vt0KIHWFEeytUNvVPSzciA" name="Interviewers" actor="_umrGcHWGEeytUNvVPSzciA">
-        <elements xmi:type="process:Task" xmi:id="_nwF-QHWIEeytUNvVPSzciA" name="Interview" outgoing="_-fLKkHYSEeyU9MZtNVXQsA" incoming="_9g_A0HYOEeyU9MZtNVXQsA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_nwF-QHWIEeytUNvVPSzciA" name="Interview" outgoing="_-fLKkHYSEeyU9MZtNVXQsA" incoming="_9g_A0HYOEeyU9MZtNVXQsA" type="PARALLEL" collectionDataToMultiInstantiate="_9kOiEH1hEeyei4jnMeFyBw" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_nwGlUXWIEeytUNvVPSzciA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_nwGlUHWIEeytUNvVPSzciA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_nwGlUnWIEeytUNvVPSzciA" name="" content="" returnTypeFixed="true"/>
           <loopCondition xmi:type="expression:Expression" xmi:id="_nwGlU3WIEeytUNvVPSzciA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_nwGlVHWIEeytUNvVPSzciA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_nwGlVXWIEeytUNvVPSzciA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <iteratorExpression xmi:type="expression:Expression" xmi:id="_nwGlV3WIEeytUNvVPSzciA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_nwGlV3WIEeytUNvVPSzciA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="com.company.model.Interview" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_nwGlVnWIEeytUNvVPSzciA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_nwGlWXWIEeytUNvVPSzciA" type="NONE">
             <targetForm xmi:type="expression:Expression" xmi:id="_nwGlWnWIEeytUNvVPSzciA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_koVPwH1iEeyei4jnMeFyBw" name="concreteinterviewer" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_koVPwX1iEeyei4jnMeFyBw" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_koVPwn1iEeyei4jnMeFyBw" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_koVPw31iEeyei4jnMeFyBw" name="userId()" content="return multiInstanceIterator.interviewerUserId;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_koVPxH1iEeyei4jnMeFyBw" name="multiInstanceIterator" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.Interview"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_nwGlWHWIEeytUNvVPSzciA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_nwGlW3WIEeytUNvVPSzciA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_73-REHYNEeyU9MZtNVXQsA" name="Interview doodle" outgoing="_77rFUHYNEeyU9MZtNVXQsA" incoming="_PfMZYHitEeyNJKN7_FJOOg" useCardinality="true" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_73-REHYNEeyU9MZtNVXQsA" name="Interview doodle" outgoing="_77rFUHYNEeyU9MZtNVXQsA" incoming="_PfMZYHitEeyNJKN7_FJOOg" type="PARALLEL" collectionDataToMultiInstantiate="_9kOiEH1hEeyei4jnMeFyBw" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_74XSoXYNEeyU9MZtNVXQsA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_74XSoHYNEeyU9MZtNVXQsA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_74XSonYNEeyU9MZtNVXQsA" name="" content="" returnTypeFixed="true"/>
           <loopCondition xmi:type="expression:Expression" xmi:id="_74XSo3YNEeyU9MZtNVXQsA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_74XSpHYNEeyU9MZtNVXQsA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_74XSpXYNEeyU9MZtNVXQsA" name="3" content="3" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <iteratorExpression xmi:type="expression:Expression" xmi:id="_74X5sXYNEeyU9MZtNVXQsA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_74X5sXYNEeyU9MZtNVXQsA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="com.company.model.Interview" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_74X5sHYNEeyU9MZtNVXQsA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_74YgwXYNEeyU9MZtNVXQsA" type="NONE">
             <targetForm xmi:type="expression:Expression" xmi:id="_74YgwnYNEeyU9MZtNVXQsA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_axCagH1iEeyei4jnMeFyBw" name="concreteinterviewer" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_axCagX1iEeyei4jnMeFyBw" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_axCagn1iEeyei4jnMeFyBw" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_axCag31iEeyei4jnMeFyBw" name="userId()" content="return multiInstanceIterator.interviewerUserId;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_axCahH1iEeyei4jnMeFyBw" name="multiInstanceIterator" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.Interview"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_74YgwHYNEeyU9MZtNVXQsA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_74Ygw3YNEeyU9MZtNVXQsA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
@@ -1475,11 +1561,11 @@
         </defaultValue>
       </data>
       <data xmi:type="process:BusinessObjectData" xmi:id="_xX59sHhUEeynu6RDdXR-ew" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_xX59sXhUEeynu6RDdXR-ew" name="init_application()" content="import com.company.model.Education&#xD;&#xA;&#xD;&#xA;def ja = jobApplicationDAO.newInstance();&#xD;&#xA;ja.setJobPosting(jobPostingDAO.findByPersistenceId(jobPosting));&#xD;&#xA;ja.setEducationDegree(new Education());&#xD;&#xA;return ja;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.JobApplication">
-          <referencedElements xmi:type="expression:Expression" xmi:id="_iF0joHhoEeyNJKN7_FJOOg" name="jobApplicationDAO" content="jobApplicationDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.JobApplicationDAO" returnTypeFixed="true"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_iF0joXhoEeyNJKN7_FJOOg" name="jobPostingDAO" content="jobPostingDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.JobPostingDAO" returnTypeFixed="true"/>
-          <referencedElements xmi:type="process:ContractInput" xmi:id="_iF0jonhoEeyNJKN7_FJOOg" name="jobPosting" type="LONG">
-            <mapping xmi:type="process:ContractInputMapping" xmi:id="_iF0jo3hoEeyNJKN7_FJOOg"/>
+        <defaultValue xmi:type="expression:Expression" xmi:id="_xX59sXhUEeynu6RDdXR-ew" name="init_application()" content="import com.company.model.Education&#xD;&#xA;import com.company.model.Interview&#xD;&#xA;&#xD;&#xA;def ja = jobApplicationDAO.newInstance();&#xD;&#xA;ja.setJobPosting(jobPostingDAO.findByPersistenceId(jobPosting));&#xD;&#xA;ja.setEducationDegree(new Education());&#xD;&#xA;ja.setInterviews(new ArrayList&lt;Interview>());&#xD;&#xA;return ja;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.JobApplication">
+          <referencedElements xmi:type="expression:Expression" xmi:id="_dYNtkH1hEeyei4jnMeFyBw" name="jobApplicationDAO" content="jobApplicationDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.JobApplicationDAO" returnTypeFixed="true"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_dYNtkX1hEeyei4jnMeFyBw" name="jobPostingDAO" content="jobPostingDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.JobPostingDAO" returnTypeFixed="true"/>
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_dYNtkn1hEeyei4jnMeFyBw" name="jobPosting" type="LONG">
+            <mapping xmi:type="process:ContractInputMapping" xmi:id="_dYNtk31hEeyei4jnMeFyBw"/>
           </referencedElements>
         </defaultValue>
       </data>
@@ -1488,6 +1574,9 @@
       </data>
       <data xmi:type="process:JavaObjectData" xmi:id="_SQBwoHhdEeyuer5MKxpb3A" name="motivationalLetterFile" dataType="_SwU6onSxEeyfqopOiyOtAQ" className="org.bonitasoft.engine.bpm.contract.FileInputValue">
         <defaultValue xmi:type="expression:Expression" xmi:id="_SQBwoXhdEeyuer5MKxpb3A" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.bpm.contract.FileInputValue"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_9kOiEH1hEeyei4jnMeFyBw" name="interviews" multiple="true" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.Interview">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_9kOiEX1hEeyei4jnMeFyBw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_SwU6hHSxEeyfqopOiyOtAQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_-pPFkHe_Eey5PcOMoroDbA" name="chooseJobPostingToApplyToForm" content="c01510cc-d159-457a-b694-ec7e81e27b8e" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

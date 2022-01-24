@@ -86,6 +86,14 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.Interview">
+            <fields>
+                <field type="LONG" length="255" name="interviewerUserId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.JobApplication">
             <fields>
                 <relationField type="AGGREGATION" reference="com.company.model.JobPosting" fetchType="LAZY" name="jobPosting" nullable="true" collection="false"/>
@@ -99,6 +107,7 @@
                 <field type="LONG" length="255" name="interviewerDevSenior" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="interviewerHR" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="interviewerEmployeeLang" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Interview" fetchType="EAGER" name="interviews" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

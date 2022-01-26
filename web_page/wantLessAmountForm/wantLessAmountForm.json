@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "wantLessAmountForm",
   "name" : "wantLessAmountForm",
-  "lastUpdate" : 1643146055465,
+  "lastUpdate" : 1643214412494,
   "rows" : [
     [
       {
@@ -316,7 +316,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Amount"
+                          "value" : "Requested amount"
                         },
                         "placeholder" : {
                           "type" : "constant"

@@ -659,7 +659,7 @@
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_b_k_a3e-Eeyrfeqi_TQ-cA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:ServiceTask" xmi:id="_P5Jm0HfDEeyrfeqi_TQ-cA" name="Generate best offer" outgoing="_0Wy9sHfFEeyrfeqi_TQ-cA" incoming="_RhVsoHfDEeyrfeqi_TQ-cA">
+        <elements xmi:type="process:ServiceTask" xmi:id="_P5Jm0HfDEeyrfeqi_TQ-cA" name="Calculate best offers" outgoing="_0Wy9sHfFEeyrfeqi_TQ-cA" incoming="_RhVsoHfDEeyrfeqi_TQ-cA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_P5Jm0nfDEeyrfeqi_TQ-cA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_P5Jm0XfDEeyrfeqi_TQ-cA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_P5Jm03fDEeyrfeqi_TQ-cA" name="" content="" returnTypeFixed="true"/>

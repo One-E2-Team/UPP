@@ -7,13 +7,24 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_AXNSCHe6Eeyrfeqi_TQ-cA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_AXNSCXe6Eeyrfeqi_TQ-cA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_AXNSCne6Eeyrfeqi_TQ-cA" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_iEvJ8H7IEeyeQokaM7u6iw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_iEvJ8X7IEeyeQokaM7u6iw" name="equipmentOrder" content="equipmentOrder" type="TYPE_VARIABLE" returnType="com.company.model.EquipmentOrder">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_iw9WwH7IEeyeQokaM7u6iw" name="equipmentOrder" dataType="_AXNSNHe6Eeyrfeqi_TQ-cA" className="com.company.model.EquipmentOrder"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_iEvJ8n7IEeyeQokaM7u6iw" name="addOffersToOrderItems()" content="import com.company.model.EquipmentItemOffer&#xD;&#xA;&#xD;&#xA;def i = 0;&#xD;&#xA;for (i = 0; i &lt; equipmentOrder.getEquipmentItems().size(); i++) {&#xD;&#xA;&#x9;def currentEquipmentItem = equipmentOrder.getEquipmentItems().get(i);&#xD;&#xA;&#x9;def currentOfferPrice = equipmentOrderInput.get(&quot;equipmentItems&quot;)&#xD;&#xA;&#x9;&#x9;.get(i).get(&quot;offerPrice&quot;).toString();&#xD;&#xA;&#x9;if (currentOfferPrice != &quot;null&quot;) { // Fuck You Groovy :)))))))&#xD;&#xA;&#x9;&#x9;def offer = new EquipmentItemOffer();&#xD;&#xA;&#x9;&#x9;offer.setSupplierId(multiInstanceIterator.getId());&#xD;&#xA;&#x9;&#x9;offer.setIsBest(false);&#xD;&#xA;&#x9;&#x9;offer.setPrice(Double.parseDouble(currentOfferPrice));&#xD;&#xA;&#x9;&#x9;currentEquipmentItem.addToOffers(offer);&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return equipmentOrder;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.EquipmentOrder">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_wM03QH7OEeyeQokaM7u6iw" name="equipmentOrder" dataType="_AXNSNHe6Eeyrfeqi_TQ-cA" className="com.company.model.EquipmentOrder"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_wM03QX7OEeyeQokaM7u6iw" name="equipmentOrderInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_wM03Qn7OEeyeQokaM7u6iw" name="multiInstanceIterator" dataType="_AXNSMne6Eeyrfeqi_TQ-cA" className="org.bonitasoft.engine.identity.User"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_iEvJ837IEeyeQokaM7u6iw" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_AXNSC3e6Eeyrfeqi_TQ-cA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_AXNSDHe6Eeyrfeqi_TQ-cA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_AXNSDXe6Eeyrfeqi_TQ-cA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_AXNSDne6Eeyrfeqi_TQ-cA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="org.bonitasoft.engine.identity.User" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_AXNSD3e6Eeyrfeqi_TQ-cA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_AXNSEHe6Eeyrfeqi_TQ-cA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_oWko4HfMEeyrfeqi_TQ-cA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_k1Rp0H7GEeyeQokaM7u6iw" name="createOffersForm" content="e12a5ab3-b755-43b7-9641-42fda8113e54" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_zjM3MHe9Eeyrfeqi_TQ-cA" name="setSupplierId" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_zjM3MXe9Eeyrfeqi_TQ-cA" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -24,7 +35,28 @@
               </parameters>
             </configuration>
           </filters>
-          <contract xmi:type="process:Contract" xmi:id="_AXNSEne6Eeyrfeqi_TQ-cA"/>
+          <contract xmi:type="process:Contract" xmi:id="_AXNSEne6Eeyrfeqi_TQ-cA">
+            <inputs xmi:type="process:ContractInput" xmi:id="_1fY-EH7DEeyeQokaM7u6iw" name="equipmentOrderInput" type="COMPLEX" dataReference="equipmentOrder" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_1fY-EX7DEeyeQokaM7u6iw" name="equipmentItems" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_1fY-En7DEeyeQokaM7u6iw" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_1fY-E37DEeyeQokaM7u6iw" name="type" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_1fY-FH7DEeyeQokaM7u6iw" name="category" type="COMPLEX" createMode="false">
+                  <inputs xmi:type="process:ContractInput" xmi:id="_1fY-FX7DEeyeQokaM7u6iw" name="persistenceId_string" createMode="false"/>
+                  <inputs xmi:type="process:ContractInput" xmi:id="_1fY-Fn7DEeyeQokaM7u6iw" name="name" createMode="false"/>
+                </inputs>
+                <inputs xmi:type="process:ContractInput" xmi:id="_1fY-F37DEeyeQokaM7u6iw" name="requiredAdditionalAmount" type="INTEGER" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_Bq8qEH7GEeyeQokaM7u6iw" name="offerPrice" type="DECIMAL">
+                  <mapping xmi:type="process:ContractInputMapping" xmi:id="_Bq8qEX7GEeyeQokaM7u6iw"/>
+                </inputs>
+              </inputs>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_1faMMH7DEeyeQokaM7u6iw" expression="!equipmentOrderInput?.equipmentItems || equipmentOrderInput?.equipmentItems?.persistenceId_string" errorMessage="EquipmentItem must reference an existing instance with a persistenceId for EquipmentOrder" name="aggregation_equipmentOrderInput_equipmentItems">
+              <inputNames>equipmentOrderInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_1faMMX7DEeyeQokaM7u6iw" expression="equipmentOrderInput?.equipmentItems?.category.flatten().every{!it || it.persistenceId_string}" errorMessage="EquipmentCategory must reference an existing instance with a persistenceId for EquipmentItem" name="aggregation_equipmentOrderInput_equipmentItems_category">
+              <inputNames>equipmentOrderInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_AXNSE3e6Eeyrfeqi_TQ-cA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:StartMessageEvent" xmi:id="_slGkAHe6Eeyrfeqi_TQ-cA" name="Start1" outgoing="_ukYXUHe-Eeyrfeqi_TQ-cA" event="tender">
@@ -77,7 +109,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_zfWcgXe-Eeyrfeqi_TQ-cA" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_AXNSFHe6Eeyrfeqi_TQ-cA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_oWko4XfMEeyrfeqi_TQ-cA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_GWfSgH7OEeyeQokaM7u6iw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_AXNSFne6Eeyrfeqi_TQ-cA">
         <targetForm xmi:type="expression:Expression" xmi:id="_AXNSF3e6Eeyrfeqi_TQ-cA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

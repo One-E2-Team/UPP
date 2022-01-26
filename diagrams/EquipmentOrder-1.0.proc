@@ -662,24 +662,6 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_SUYiAXY1EeyEOJxb-TbfBg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_SUYiAHY1EeyEOJxb-TbfBg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_SUYiAnY1EeyEOJxb-TbfBg" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_yHyN8HZQEeyclI3l2fBelQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_yHyN8XZQEeyclI3l2fBelQ" name="orderedItems" content="orderedItems" type="TYPE_VARIABLE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_yp41cHZQEeyclI3l2fBelQ" name="orderedItems" dataType="_qdJFPnVhEey_0tg5y7uxiA"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_yHyN8nZQEeyclI3l2fBelQ" name="orderedItemsCount()" content="return equipmentOrderInModel.equipmentItems.size();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7HHgcHZQEeyclI3l2fBelQ" name="equipmentOrderInModel" dataType="_qdJFRHVhEey_0tg5y7uxiA" className="com.company.model.EquipmentOrder"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_yHyN83ZQEeyclI3l2fBelQ" type="ASSIGNMENT"/>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Eovf4HbOEeyJk6A_V5dMJQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_EowG8HbOEeyJk6A_V5dMJQ" name="i" content="i" type="TYPE_VARIABLE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_NiZBIHbOEeyJk6A_V5dMJQ" name="i" dataType="_qdJFPnVhEey_0tg5y7uxiA"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_EowG8XbOEeyJk6A_V5dMJQ" name="initLoopVariable()" content="return equipmentOrderInModel.equipmentItems.size();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ZPycYHbOEeyJk6A_V5dMJQ" name="equipmentOrderInModel" dataType="_qdJFRHVhEey_0tg5y7uxiA" className="com.company.model.EquipmentOrder"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_EowG8nbOEeyJk6A_V5dMJQ" type="ASSIGNMENT"/>
-          </operations>
           <operations xmi:type="expression:Operation" xmi:id="_Nut_QH1YEeyV8sPw72JbQw">
             <leftOperand xmi:type="expression:Expression" xmi:id="_Nut_QX1YEeyV8sPw72JbQw" name="iterableEquipmentItems" content="iterableEquipmentItems" type="TYPE_VARIABLE" returnType="java.util.List">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_OdgX4H1YEeyV8sPw72JbQw" name="iterableEquipmentItems" multiple="true" dataType="_qdJFRHVhEey_0tg5y7uxiA" className="com.company.model.EquipmentItem"/>
@@ -718,7 +700,7 @@
           <calledActivityName xmi:type="expression:Expression" xmi:id="_vmXd5H1SEeyPzvUyBIvLTg" name="Check Order Item Availability" content="Check Order Item Availability" returnTypeFixed="true"/>
           <calledActivityVersion xmi:type="expression:Expression" xmi:id="_vmXd5X1SEeyPzvUyBIvLTg" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:CallActivity" xmi:id="_xVIQMH7bEeyeQokaM7u6iw" name="Create offers" outgoing="_ULLCAH7cEeyeQokaM7u6iw" incoming="_yJ2RsH7bEeyeQokaM7u6iw">
+        <elements xmi:type="process:CallActivity" xmi:id="_xVIQMH7bEeyeQokaM7u6iw" name="Suppliers creating offers" outgoing="_ULLCAH7cEeyeQokaM7u6iw" incoming="_yJ2RsH7bEeyeQokaM7u6iw">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_xVI3QX7bEeyeQokaM7u6iw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_xVI3QH7bEeyeQokaM7u6iw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_xVI3Qn7bEeyeQokaM7u6iw" name="" content="" returnTypeFixed="true"/>
@@ -753,15 +735,6 @@
           <referencedElements xmi:type="expression:Expression" xmi:id="_VoRokHiOEeyqhu1YemoKaA" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
           <referencedElements xmi:type="expression:Expression" xmi:id="_VoRokXiOEeyqhu1YemoKaA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
-      </data>
-      <data xmi:type="process:Data" xmi:id="_xEJmsHZQEeyclI3l2fBelQ" name="orderedItems" dataType="_qdJFPnVhEey_0tg5y7uxiA">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_xEJmsXZQEeyclI3l2fBelQ" name="0" content="0" returnType="java.lang.Integer"/>
-      </data>
-      <data xmi:type="process:Data" xmi:id="_3Fn5IHbNEeyJk6A_V5dMJQ" name="i" dataType="_qdJFPnVhEey_0tg5y7uxiA">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_3Fn5IXbNEeyJk6A_V5dMJQ" name="0" content="0" returnType="java.lang.Integer"/>
-      </data>
-      <data xmi:type="process:Data" xmi:id="_DpiFoHbOEeyJk6A_V5dMJQ" name="finishedOfferProcesses" dataType="_qdJFPnVhEey_0tg5y7uxiA">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_DpiFoXbOEeyJk6A_V5dMJQ" name="0" content="0" returnType="java.lang.Integer"/>
       </data>
       <data xmi:type="process:Data" xmi:id="_Sx7SMHb8Eey6wP-aeZVbgg" name="totalRequiredItemAmount" dataType="_qdJFPnVhEey_0tg5y7uxiA">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Sx7SMXb8Eey6wP-aeZVbgg" name="0" content="0" returnType="java.lang.Integer"/>
@@ -1238,7 +1211,7 @@
                 </children>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ScjkEX7cEeyeQokaM7u6iw" x="77" y="50"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xVJeUX7bEeyeQokaM7u6iw" x="212" y="340" width="116" height="58"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xVJeUX7bEeyeQokaM7u6iw" x="212" y="340" width="120" height="60"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_Ga7dMnY0EeyEOJxb-TbfBg"/>
@@ -1337,7 +1310,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_RhWTtHfDEeyrfeqi_TQ-cA" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_RhWTsXfDEeyrfeqi_TQ-cA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RhWTsnfDEeyrfeqi_TQ-cA" points="[0, -7, -131, -6]$[71, -7, -60, -6]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RhWTsnfDEeyrfeqi_TQ-cA" points="[0, -7, -143, 2]$[83, -7, -60, 2]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RhW6wHfDEeyrfeqi_TQ-cA" id="(1.0,0.62)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_0Wy9s3fFEeyrfeqi_TQ-cA" type="4001" element="_0Wy9sHfFEeyrfeqi_TQ-cA" source="_P5KN4HfDEeyrfeqi_TQ-cA" target="_b-oVcHfEEeyrfeqi_TQ-cA" roundedBendpointsRadius="10" routing="Rectilinear">

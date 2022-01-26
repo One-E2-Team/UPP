@@ -461,7 +461,7 @@
             <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_d6yfEHiTEeyobMRvMGzegg" name="conferenceRequest" dataType="_wOeoBHUwEey-uZYfpqG2oA" className="com.company.model.ConferenceRequest"/>
           </condition>
         </elements>
-        <elements xmi:type="process:ScriptTask" xmi:id="_vsQAcHiREeyobMRvMGzegg" name="Send reminding main" outgoing="_wdi6gHiREeyobMRvMGzegg" incoming="_wFMr8HiREeyobMRvMGzegg">
+        <elements xmi:type="process:ScriptTask" xmi:id="_vsQAcHiREeyobMRvMGzegg" name="Send reminding mail" outgoing="_wdi6gHiREeyobMRvMGzegg" incoming="_wFMr8HiREeyobMRvMGzegg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_vsQngXiREeyobMRvMGzegg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_vsQngHiREeyobMRvMGzegg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_vsQngniREeyobMRvMGzegg" name="" content="" returnTypeFixed="true"/>

@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "selectInterviewTimeForm",
   "name" : "selectInterviewTimeForm",
-  "lastUpdate" : 1643207607299,
+  "lastUpdate" : 1643223723789,
   "rows" : [
     [
       {
@@ -1764,7 +1764,7 @@
     "checks7" : {
       "type" : "expression",
       "value" : [
-        "return $data.checks.reduce((partialSum, a) => partialSum + a, 0) >= 7;"
+        "return $data.checks.reduce((partialSum, a) => partialSum + a, 0) < 7;"
       ],
       "exposed" : false
     }

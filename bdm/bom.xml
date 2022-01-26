@@ -89,6 +89,10 @@
         <businessObject qualifiedName="com.company.model.Interview">
             <fields>
                 <field type="LONG" length="255" name="interviewerUserId" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="evaluation" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="rate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="impression" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isRecommended" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -108,6 +112,7 @@
                 <field type="LONG" length="255" name="interviewerHR" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="interviewerEmployeeLang" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.Interview" fetchType="EAGER" name="interviews" nullable="true" collection="true"/>
+                <field type="DATE" length="255" name="acceptedDate" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

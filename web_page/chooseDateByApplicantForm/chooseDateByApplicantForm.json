@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "chooseDateByApplicantForm",
   "name" : "chooseDateByApplicantForm",
-  "lastUpdate" : 1643231256069,
+  "lastUpdate" : 1643302601667,
   "rows" : [
     [
       {
@@ -881,18 +881,18 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "var selectedDate = null;",
+        "var selectedDatePosition = -1;",
         "for (var i = 0; i < $data.checks.length; i++){",
         "    if ($data.checks[i]){",
-        "        selectedDate = new Date($data.dateOptions.value.slice(1+(28+2)*i,1+(i+1)*28+i*2));",
+        "        selectedDatePosition = i;",
         "        break;",
         "    }",
         "}",
         "",
-        "console.log(selectedDate);",
+        "console.log(selectedDatePosition);",
         "",
         "return {",
-        "\tinput1: selectedDate,",
+        "\tinput1: selectedDatePosition,",
         "\tisCancelled: false",
         "}"
       ],
@@ -966,7 +966,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tinput1: null,",
+        "\tinput1: -1,",
         "\tisCancelled : true",
         "}"
       ],

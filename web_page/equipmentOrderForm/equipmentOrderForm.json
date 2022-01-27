@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "equipmentOrderForm",
   "name" : "equipmentOrderForm",
-  "lastUpdate" : 1642534622865,
+  "lastUpdate" : 1643306091783,
   "rows" : [
     [
       {
@@ -654,7 +654,8 @@
                                 "value" : ""
                               },
                               "min" : {
-                                "type" : "constant"
+                                "type" : "constant",
+                                "value" : 1
                               },
                               "max" : {
                                 "type" : "constant"

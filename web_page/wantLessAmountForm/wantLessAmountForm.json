@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "wantLessAmountForm",
   "name" : "wantLessAmountForm",
-  "lastUpdate" : 1643214412494,
+  "lastUpdate" : 1643307752575,
   "rows" : [
     [
       {
@@ -451,7 +451,7 @@
                       "propertyValues" : {
                         "hidden" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "level" : {
                           "type" : "constant",
@@ -617,7 +617,7 @@
                               },
                               "label" : {
                                 "type" : "interpolation",
-                                "value" : "Name"
+                                "value" : "Category name"
                               },
                               "placeholder" : {
                                 "type" : "constant"
@@ -664,6 +664,42 @@
                           }
                         ]
                       ]
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : ""
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 2"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "26a937b4-206f-4c9f-bcf6-3a0b4a83b039",
+                      "hasValidationError" : false,
+                      "id" : "pbTitle"
                     }
                   ]
                 ]

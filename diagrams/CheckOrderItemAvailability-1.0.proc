@@ -147,7 +147,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_NFXiaHbYEeyJk6A_V5dMJQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_NFXiZ3bYEeyJk6A_V5dMJQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_eLRTYHbYEeyJk6A_V5dMJQ" name="Want less amount" outgoing="_w1mrkHbYEeyJk6A_V5dMJQ" incoming="_fmCoQHbYEeyJk6A_V5dMJQ" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_eLRTYHbYEeyJk6A_V5dMJQ" name="Want less amount" outgoing="_w1mrkHbYEeyJk6A_V5dMJQ" incoming="_fmCoQHbYEeyJk6A_V5dMJQ" actor="_CzDTIHbaEeyJk6A_V5dMJQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_eLRTYnbYEeyJk6A_V5dMJQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_eLRTYXbYEeyJk6A_V5dMJQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_eLRTY3bYEeyJk6A_V5dMJQ" name="" content="" returnTypeFixed="true"/>
@@ -173,6 +173,15 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_eLR6dnbYEeyJk6A_V5dMJQ">
             <targetForm xmi:type="expression:Expression" xmi:id="_V1t7gH4cEey94K-FoH3i6w" name="wantLessAmountForm" content="a57c0d62-0da2-4331-ad38-58766f53786f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_J1V6wH-ZEeycq4JtLc9_nQ" name="employee" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_J1Wh0H-ZEeycq4JtLc9_nQ" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_J1Wh0X-ZEeycq4JtLc9_nQ" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_J1Wh0n-ZEeycq4JtLc9_nQ" name="employeeId" content="employeeId" type="TYPE_VARIABLE" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_J1Wh03-ZEeycq4JtLc9_nQ" name="employeeId" dataType="_b0xk-HbSEeyJk6A_V5dMJQ"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_eLR6dXbYEeyJk6A_V5dMJQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_AfKMcH4CEey94K-FoH3i6w" name="equipmentItemInput" type="COMPLEX" dataReference="equipmentItem" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_AfKMcX4CEey94K-FoH3i6w" name="type" createMode="false"/>
@@ -259,7 +268,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_aQyCUX4AEey94K-FoH3i6w" name="0" content="0" returnType="java.lang.Integer"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_b0xk3XbSEeyJk6A_V5dMJQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_njzNMH4kEey94K-FoH3i6w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_cikO4H-ZEeycq4JtLc9_nQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_b0xk33bSEeyJk6A_V5dMJQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_b0xk4HbSEeyJk6A_V5dMJQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -340,6 +349,7 @@
           </actorMapping>
         </actorMappings>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_8b6O4H4AEey94K-FoH3i6w" type="CONNECTOR" definitionId="email" definitionVersion="1.2.0" implementationId="email-impl" implementationVersion="1.3.0"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_cbWzoH-ZEeycq4JtLc9_nQ" type="ACTOR_FILTER" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0" implementationId="bonita-actorfilter-single-user-impl" implementationVersion="1.0.0"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mumJ4XbZEeyJk6A_V5dMJQ" id="CONNECTOR">
           <children xmi:type="configuration:FragmentContainer" xmi:id="_8cUekH4AEey94K-FoH3i6w" id="email-impl-1.3.0">
             <fragments xmi:type="configuration:Fragment" xmi:id="_8eyjwH4AEey94K-FoH3i6w" key="email-impl -- 1.3.0" value="bonita-connector-email-1.3.0.jar" type="CONNECTOR"/>
@@ -348,7 +358,11 @@
           </children>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mumJ4nbZEeyJk6A_V5dMJQ" id="GROOVY_SCRIPT"/>
-        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mumJ43bZEeyJk6A_V5dMJQ" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mumJ43bZEeyJk6A_V5dMJQ" id="ACTOR_FILTER">
+          <children xmi:type="configuration:FragmentContainer" xmi:id="_cbf9kH-ZEeycq4JtLc9_nQ" id="bonita-actorfilter-single-user-impl-1.0.0">
+            <fragments xmi:type="configuration:Fragment" xmi:id="_cbhLsH-ZEeycq4JtLc9_nQ" key="bonita-actorfilter-single-user-impl -- 1.0.0" value="bonita-actorfilter-single-user-1.0.0.jar" type="ACTOR_FILTER"/>
+          </children>
+        </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mumJ5HbZEeyJk6A_V5dMJQ" id="OTHER"/>
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mumJ5XbZEeyJk6A_V5dMJQ" id="GROOVY_SCRIPT"/>
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_mumJ5nbZEeyJk6A_V5dMJQ" id="OTHER"/>

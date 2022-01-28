@@ -72,7 +72,14 @@
                 <expression xmi:type="expression:TableExpression" xmi:id="_EHM0yXhdEeyuer5MKxpb3A"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_EHM0ynhdEeyuer5MKxpb3A" key="urlHeaders">
-                <expression xmi:type="expression:TableExpression" xmi:id="_EHM0y3hdEeyuer5MKxpb3A"/>
+                <expression xmi:type="expression:TableExpression" xmi:id="_EHM0y3hdEeyuer5MKxpb3A">
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_HLgnUICBEey84PLsIjkkjA">
+                    <expressions xmi:type="expression:Expression" xmi:id="_HLgnUYCBEey84PLsIjkkjA" name="candidateId" content="candidateId"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_HLgnUoCBEey84PLsIjkkjA" name="candidateUserId" content="candidateUserId" type="TYPE_VARIABLE" returnType="java.lang.Long">
+                      <referencedElements xmi:type="process:Data" xmi:id="_HLgnU4CBEey84PLsIjkkjA" name="candidateUserId" dataType="_SwU6n3SxEeyfqopOiyOtAQ"/>
+                    </expressions>
+                  </expressions>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_EHM0zHhdEeyuer5MKxpb3A" key="documentBody">
                 <expression xmi:type="expression:Expression" xmi:id="_EHM0zXhdEeyuer5MKxpb3A" name="documentBody()" content="return cvFile;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
@@ -203,9 +210,9 @@
                 <expression xmi:type="expression:TableExpression" xmi:id="_RuQG-4B5Eey84PLsIjkkjA"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_RuQG_IB5Eey84PLsIjkkjA" key="body">
-                <expression xmi:type="expression:Expression" xmi:id="_RuQG_YB5Eey84PLsIjkkjA" name="body()" content="import java.util.logging.Logger&#xD;&#xA;Logger logger = Logger.getLogger(&quot;rs.ac.uns.ftn.e2.One-E2-Team.UPP&quot;);&#xD;&#xA;&#xD;&#xA;def date = application.getSubmissionTimestamp()&#xD;&#xA;def city = &quot;&quot;&#xD;&#xA;def jobId = application.getPersistenceId()&#xD;&#xA;try{&#xD;&#xA;&#x9;def proContactData = apiAccessor.getIdentityAPI().getUserContactData(application.getCandidateUserId(), true)&#xD;&#xA;&#x9;city = proContactData.getCity()&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;logger.info(&quot;insert user into organization resulted in error&quot;);&#xD;&#xA;&#x9;logger.info(e.message);&#xD;&#xA;&#x9;logger.info(e.stackTrace);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return &quot;&quot;&quot; {&quot;city&quot; : $city , &quot;date&quot;: $date, &quot;jobId&quot;: $jobId} &quot;&quot;&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_9I2eUIB6Eey84PLsIjkkjA" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_9I3FYIB6Eey84PLsIjkkjA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                <expression xmi:type="expression:Expression" xmi:id="_RuQG_YB5Eey84PLsIjkkjA" name="body()" content="import java.util.logging.Logger&#xD;&#xA;Logger logger = Logger.getLogger(&quot;rs.ac.uns.ftn.e2.One-E2-Team.UPP&quot;);&#xD;&#xA;&#xD;&#xA;def date = application.getSubmissionTimestamp()&#xD;&#xA;def city = &quot;&quot;&#xD;&#xA;def jobId = application.jobPosting.getPersistenceId()&#xD;&#xA;def jobName = application.jobPosting.getName()&#xD;&#xA;def candidateId = application.getCandidateUserId()&#xD;&#xA;try{&#xD;&#xA;&#x9;def proContactData = apiAccessor.getIdentityAPI().getUserContactData(application.getCandidateUserId(), true)&#xD;&#xA;&#x9;city = proContactData.getCity()&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;logger.info(&quot;insert user into organization resulted in error&quot;);&#xD;&#xA;&#x9;logger.info(e.message);&#xD;&#xA;&#x9;logger.info(e.stackTrace);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return &quot;&quot;&quot; {&quot;city&quot; : $city , &quot;date&quot;: $date, &quot;jobId&quot;: $jobId, &quot;name&quot; : $jobName, &quot;candidateId&quot;: $candidateId} &quot;&quot;&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1z1XkICFEey84PLsIjkkjA" name="application" dataType="_SwU6pHSxEeyfqopOiyOtAQ" className="com.company.model.JobApplication"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_1z1XkYCFEey84PLsIjkkjA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_RuQG_oB5Eey84PLsIjkkjA" key="do_not_follow_redirect">

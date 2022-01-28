@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "chooseJobPostingToApplyToForm",
   "name" : "chooseJobPostingToApplyToForm",
-  "lastUpdate" : 1642508449108,
+  "lastUpdate" : 1643406619157,
   "rows" : [
     [
       {
@@ -51,6 +51,42 @@
                     "type" : "constant",
                     "value" : false
                   },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Apply for a job application"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 2"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "b2abe548-ba6d-4bd3-947f-1e0441fdd21a",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
                   "disabled" : {
                     "type" : "constant",
                     "value" : false
@@ -65,7 +101,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Select"
+                    "value" : "Select job"
                   },
                   "labelPosition" : {
                     "type" : "constant",

@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "jobApplicationStatsForm",
   "name" : "jobApplicationStatsForm",
-  "lastUpdate" : 1643407127961,
+  "lastUpdate" : 1643409461915,
   "rows" : [
     [
       {
@@ -10,7 +10,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "eeed2f51-79f1-4506-8e6b-0a7c2ae353a8",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -87,6 +96,58 @@
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "<hr>"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "0fb1777c-1a50-48ad-ab2e-872e117d0d97",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
+                  ],
                   [
                     {
                       "type" : "component",

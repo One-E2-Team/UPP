@@ -72,15 +72,19 @@ def job_application():
 
 @api.route('/api/cv', methods=['PUT'])
 def put_cv():
-    name = str(uuid.uuid4()) + ".pdf"
-    with open('./temp/' + name, 'wb') as f:
-        f.write(request.data)
-        f.close()
+    name = save_pdf_with_random_name(request.data)
     print("Received CV file for Job Application for User with userId: " + request.headers['candidateId'] + ". File saved in ./temp/" + name)
     return 204, {'Access-Control-Allow-Origin': '*'}
 
 def pay_for_service(data):
     print("Payment request:" + data)
+
+def save_pdf_with_random_name(data):
+    name = str(uuid.uuid4()) + ".pdf"
+    with open('./temp/' + name, 'wb') as f:
+        f.write(data)
+        f.close()
+    return name
 
 if __name__ == '__main__':
     api.run(debug=True, port=81) 

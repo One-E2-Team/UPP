@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "reviewBestOffersFormForm",
   "name" : "reviewBestOffersFormForm",
-  "lastUpdate" : 1643313026814,
+  "lastUpdate" : 1643399296609,
   "rows" : [
     [
       {
@@ -500,7 +500,7 @@
                         },
                         "type" : {
                           "type" : "constant",
-                          "value" : "number"
+                          "value" : "text"
                         },
                         "min" : {
                           "type" : "constant"

@@ -1,5 +1,5 @@
 import uuid
-from flask import Flask, json
+from flask import Flask, json, request
 
 api = Flask(__name__)
 
@@ -53,37 +53,37 @@ def send_stats():
 @api.route('/api/pay-conference', methods=['POST'])
 def pay_conference():
     pay_for_service(request.data)
-    return 204, {'Access-Control-Allow-Origin': '*'}
+    return "", 204, {'Access-Control-Allow-Origin': '*'}
 
 @api.route('/api/pay-accomodation', methods=['POST'])
 def pay_accomodation():
     pay_for_service(request.data)
-    return 204, {'Access-Control-Allow-Origin': '*'}
+    return "", 204, {'Access-Control-Allow-Origin': '*'}
 
 @api.route('/api/pay-transportation', methods=['POST'])
 def pay_transportation():
     pay_for_service(request.data)
-    return 204, {'Access-Control-Allow-Origin': '*'}
+    return "", 204, {'Access-Control-Allow-Origin': '*'}
 
 @api.route('/api/job-application', methods=['POST'])
 def job_application():
-    print("Received Job Application indexing unit: " + request.data)
-    return 204, {'Access-Control-Allow-Origin': '*'}
+    print("Received Job Application indexing unit: " + str(request.data))
+    return "", 204, {'Access-Control-Allow-Origin': '*'}
 
 @api.route('/api/cv', methods=['PUT'])
 def put_cv():
     name = save_pdf_with_random_name(request.data)
-    print("Received CV file for Job Application for User with userId: " + request.headers['candidateId'] + ". File saved in ./temp/" + name)
-    return 204, {'Access-Control-Allow-Origin': '*'}
+    print("Received CV file for Job Application for User with userId: " + str(request.headers['candidateId']) + ". File saved in ./temp/" + name)
+    return "", 204, {'Access-Control-Allow-Origin': '*'}
 
 @api.route('/api/invoice', methods=['PUT'])
-def put_cv():
+def put_invoice():
     name = save_pdf_with_random_name(request.data)
     print("File (invoice) saved in ./temp/" + name)
-    return 204, {'Access-Control-Allow-Origin': '*'}
+    return "", 204, {'Access-Control-Allow-Origin': '*'}
 
 def pay_for_service(data):
-    print("Payment request:" + data)
+    print("Payment request:" + str(data))
 
 def save_pdf_with_random_name(data):
     name = str(uuid.uuid4()) + ".pdf"

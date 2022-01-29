@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "reviewBestOffersFormForm",
   "name" : "reviewBestOffersFormForm",
-  "lastUpdate" : 1643399296609,
+  "lastUpdate" : 1643478428300,
   "rows" : [
     [
       {
@@ -1427,8 +1427,8 @@
                                 "value" : ""
                               },
                               "hidden" : {
-                                "type" : "constant",
-                                "value" : false
+                                "type" : "expression",
+                                "value" : "$item.requiredAdditionalAmount == 0"
                               },
                               "text" : {
                                 "type" : "interpolation",

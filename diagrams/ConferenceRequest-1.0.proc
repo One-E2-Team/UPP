@@ -2211,7 +2211,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_oMszl3huEeyobMRvMGzegg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_oMszlnhuEeyobMRvMGzegg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_oMszmXhuEeyobMRvMGzegg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_l3GOUHiTEeyobMRvMGzegg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_-1BLIID8Eeyjp_OhB33dTw" name="payForReservationsForm" content="b0366be9-65b6-4e3d-94d9-edcffe8b4719" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_CMD4kHhvEeyobMRvMGzegg" name="selectedTechnicalDeptId" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_CMD4kXhvEeyobMRvMGzegg" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -2222,7 +2222,35 @@
               </parameters>
             </configuration>
           </filters>
-          <contract xmi:type="process:Contract" xmi:id="_oMszmHhuEeyobMRvMGzegg"/>
+          <contract xmi:type="process:Contract" xmi:id="_oMszmHhuEeyobMRvMGzegg">
+            <inputs xmi:type="process:ContractInput" xmi:id="_9ikr0ID8Eeyjp_OhB33dTw" name="conferenceRequestInput" type="COMPLEX" dataReference="conferenceRequest" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_9ikr0YD8Eeyjp_OhB33dTw" name="employeeName" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_9ikr0oD8Eeyjp_OhB33dTw" name="employeeSurname" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_9ikr04D8Eeyjp_OhB33dTw" name="conferenceName" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_9ikr1ID8Eeyjp_OhB33dTw" name="isOnline" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_9ikr1YD8Eeyjp_OhB33dTw" name="eventDate" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_9ikr1oD8Eeyjp_OhB33dTw" name="acceptedAccomodation" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr14D8Eeyjp_OhB33dTw" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr2ID8Eeyjp_OhB33dTw" name="name" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr2YD8Eeyjp_OhB33dTw" name="price" type="DECIMAL" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr2oD8Eeyjp_OhB33dTw" name="link" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr24D8Eeyjp_OhB33dTw" name="description" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_9ikr3ID8Eeyjp_OhB33dTw" name="acceptedTransportation" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr3YD8Eeyjp_OhB33dTw" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr3oD8Eeyjp_OhB33dTw" name="price" type="DECIMAL" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr34D8Eeyjp_OhB33dTw" name="link" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr4ID8Eeyjp_OhB33dTw" name="shipper" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_9ikr4YD8Eeyjp_OhB33dTw" name="description" createMode="false"/>
+              </inputs>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_9ilS4ID8Eeyjp_OhB33dTw" expression="!conferenceRequestInput?.acceptedAccomodation || conferenceRequestInput?.acceptedAccomodation?.persistenceId_string" errorMessage="Accomodation must reference an existing instance with a persistenceId for ConferenceRequest" name="aggregation_conferenceRequestInput_acceptedAccomodation">
+              <inputNames>conferenceRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_9ilS4YD8Eeyjp_OhB33dTw" expression="!conferenceRequestInput?.acceptedTransportation || conferenceRequestInput?.acceptedTransportation?.persistenceId_string" errorMessage="Transportation must reference an existing instance with a persistenceId for ConferenceRequest" name="aggregation_conferenceRequestInput_acceptedTransportation">
+              <inputNames>conferenceRequestInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_oMszm3huEeyobMRvMGzegg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:ScriptTask" xmi:id="_tPG9gHhuEeyobMRvMGzegg" name="Send confirmation email about reservations" outgoing="_xrnlEHhuEeyobMRvMGzegg" incoming="_v_vSEHhuEeyobMRvMGzegg">

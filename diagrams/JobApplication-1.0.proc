@@ -188,7 +188,7 @@
               <operator xmi:type="expression:Operator" xmi:id="_RuQHRIB5Eey84PLsIjkkjA" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
-          <connectors xmi:type="process:Connector" xmi:id="_EHM0wHhdEeyuer5MKxpb3A" name="sendCV" definitionId="rest-file-put" event="ON_FINISH" ignoreErrors="true" definitionVersion="1.0.0">
+          <connectors xmi:type="process:Connector" xmi:id="_EHM0wHhdEeyuer5MKxpb3A" name="sendCV" definitionId="rest-file-put" event="ON_FINISH" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_EHM0wXhdEeyuer5MKxpb3A" definitionId="rest-file-put" version="1.0.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_EHM0wnhdEeyuer5MKxpb3A" key="url">
                 <expression xmi:type="expression:Expression" xmi:id="_EHM0w3hdEeyuer5MKxpb3A" name="http://localhost:81/api/cv" content="http://localhost:81/api/cv" returnTypeFixed="true"/>
@@ -213,8 +213,8 @@
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_EHM0zHhdEeyuer5MKxpb3A" key="documentBody">
-                <expression xmi:type="expression:Expression" xmi:id="_EHM0zXhdEeyuer5MKxpb3A" name="documentBody()" content="return cvDoc.dump();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Document" xmi:id="_jDBIAID1Eeyprf04OdkVtQ" name="cvDoc"/>
+                <expression xmi:type="expression:Expression" xmi:id="_EHM0zXhdEeyuer5MKxpb3A" name="cvDoc" content="cvDoc" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_7K-CoID5Eeyprf04OdkVtQ" name="cvDoc"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_EHM0znhdEeyuer5MKxpb3A" key="do_not_follow_redirect">

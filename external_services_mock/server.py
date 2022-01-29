@@ -65,6 +65,11 @@ def pay_transportation():
     pay_for_service(request.data)
     return "", 204, {'Access-Control-Allow-Origin': '*'}
 
+@api.route('/api/pay-invoice', methods=['POST'])
+def pay_orders():
+    pay_for_service(request.data)
+    return "", 204, {'Access-Control-Allow-Origin': '*'}
+
 @api.route('/api/job-application', methods=['POST'])
 def job_application():
     print("Received Job Application indexing unit: " + str(request.data))

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process">
-  <process:MainProcess xmi:id="_KCie0ICBEey84PLsIjkkjA" name="JobApplicationStats" author="Andrej" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
-    <elements xmi:type="process:Pool" xmi:id="_KCie0YCBEey84PLsIjkkjA" name="Job application statistics">
+  <process:MainProcess xmi:id="_KCie0ICBEey84PLsIjkkjA" name="JobApplicationStats" version="6.9" author="Andrej" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
+    <elements xmi:type="process:Pool" xmi:id="_KCie0YCBEey84PLsIjkkjA" name="Job application statistics" version="6.9">
       <elements xmi:type="process:Lane" xmi:id="_KCie0oCBEey84PLsIjkkjA" name="HR Employee" actor="__qB9cICBEey84PLsIjkkjA">
         <elements xmi:type="process:StartEvent" xmi:id="_KCie04CBEey84PLsIjkkjA" name="Start1">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_KCie1ICBEey84PLsIjkkjA" name="" content="" returnTypeFixed="true"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_b0w9wHbSEeyJk6A_V5dMJQ" name="CheckOrderItemAvailability" author="rados" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
-    <elements xmi:type="process:Pool" xmi:id="_b0w9wXbSEeyJk6A_V5dMJQ" name="Check Order Item Availability">
+  <process:MainProcess xmi:id="_b0w9wHbSEeyJk6A_V5dMJQ" name="CheckOrderItemAvailability" version="6.9" author="rados" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
+    <elements xmi:type="process:Pool" xmi:id="_b0w9wXbSEeyJk6A_V5dMJQ" name="Check Order Item Availability" version="6.9">
       <elements xmi:type="process:Lane" xmi:id="_b0w9wnbSEeyJk6A_V5dMJQ" name="Employee lane" actor="_CzDTIHbaEeyJk6A_V5dMJQ">
         <elements xmi:type="process:ServiceTask" xmi:id="_SOcR0HbUEeyJk6A_V5dMJQ" name="Get Equipment Item" outgoing="_SdNbsHbWEeyJk6A_V5dMJQ" incoming="_0WqbsH4kEey94K-FoH3i6w">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_b0xk0XbSEeyJk6A_V5dMJQ" name="" content="" returnTypeFixed="true"/>

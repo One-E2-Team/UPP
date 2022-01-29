@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_AXNSAHe6Eeyrfeqi_TQ-cA" name="CreateOffersForOrder" author="rados" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
-    <elements xmi:type="process:Pool" xmi:id="_AXNSAXe6Eeyrfeqi_TQ-cA" name="Create Offers For Order">
+  <process:MainProcess xmi:id="_AXNSAHe6Eeyrfeqi_TQ-cA" name="CreateOffersForOrder" version="6.9" author="rados" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
+    <elements xmi:type="process:Pool" xmi:id="_AXNSAXe6Eeyrfeqi_TQ-cA" name="Create Offers For Order" version="6.9">
       <elements xmi:type="process:Lane" xmi:id="_AXNSAne6Eeyrfeqi_TQ-cA" name="Employee lane" actor="_VcAPkHe8Eeyrfeqi_TQ-cA">
         <elements xmi:type="process:Task" xmi:id="_AXNSB3e6Eeyrfeqi_TQ-cA" name="Create offers" outgoing="_t9tVsHe6Eeyrfeqi_TQ-cA" incoming="_u1IwIHe-Eeyrfeqi_TQ-cA" type="PARALLEL" collectionDataToMultiInstantiate="_zx-vgHe8Eeyrfeqi_TQ-cA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_AXNSCHe6Eeyrfeqi_TQ-cA" name="" content="" returnTypeFixed="true"/>

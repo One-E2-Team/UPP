@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_wOen0HUwEey-uZYfpqG2oA" name="ConferenceRequest" author="Andrej" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
-    <elements xmi:type="process:Pool" xmi:id="_wOen0XUwEey-uZYfpqG2oA" name="Conference Request">
+  <process:MainProcess xmi:id="_wOen0HUwEey-uZYfpqG2oA" name="ConferenceRequest" version="6.9" author="Andrej" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
+    <elements xmi:type="process:Pool" xmi:id="_wOen0XUwEey-uZYfpqG2oA" name="Conference Request" version="6.9">
       <elements xmi:type="process:Lane" xmi:id="_wOen0nUwEey-uZYfpqG2oA" name="Employee lane" actor="_Q19QUHUxEey-uZYfpqG2oA">
         <elements xmi:type="process:StartEvent" xmi:id="_wOen03UwEey-uZYfpqG2oA" name="Start1" outgoing="_0KtxUIEMEeyprf04OdkVtQ">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_wOen1HUwEey-uZYfpqG2oA" name="" content="" returnTypeFixed="true"/>

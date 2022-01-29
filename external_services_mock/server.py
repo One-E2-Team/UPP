@@ -76,6 +76,12 @@ def put_cv():
     print("Received CV file for Job Application for User with userId: " + request.headers['candidateId'] + ". File saved in ./temp/" + name)
     return 204, {'Access-Control-Allow-Origin': '*'}
 
+@api.route('/api/invoice', methods=['PUT'])
+def put_cv():
+    name = save_pdf_with_random_name(request.data)
+    print("File (invoice) saved in ./temp/" + name)
+    return 204, {'Access-Control-Allow-Origin': '*'}
+
 def pay_for_service(data):
     print("Payment request:" + data)
 

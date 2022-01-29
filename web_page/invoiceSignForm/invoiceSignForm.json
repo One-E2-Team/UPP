@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "invoiceSignForm",
   "name" : "invoiceSignForm",
-  "lastUpdate" : 1643407395565,
+  "lastUpdate" : 1643487779546,
   "rows" : [
     [
       {
@@ -223,7 +223,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Sign"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -265,6 +265,29 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "841a3f47-a950-4801-85d2-c89213d201b4",

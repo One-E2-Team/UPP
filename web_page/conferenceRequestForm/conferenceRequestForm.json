@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "conferenceRequestForm",
   "name" : "conferenceRequestForm",
-  "lastUpdate" : 1642618561559,
+  "lastUpdate" : 1643535922897,
   "rows" : [
     [
       {
@@ -417,7 +417,25 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "7ecc3a69-2a45-4058-a8ed-4bca37b30e94",
@@ -510,7 +528,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "todayLabel" : {
                           "type" : "constant",
@@ -602,7 +620,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "minLength" : {
                           "type" : "constant",

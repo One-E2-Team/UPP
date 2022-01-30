@@ -2,7 +2,7 @@
   "modelVersion" : "2.2",
   "id" : "reviewRequestByFinanceForm",
   "name" : "reviewRequestByFinanceForm",
-  "lastUpdate" : 1642618840952,
+  "lastUpdate" : 1643535892194,
   "rows" : [
     [
       {
@@ -662,8 +662,8 @@
                           "value" : false
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "conferenceRequest.isOnline"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -742,8 +742,8 @@
                           "value" : ""
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "conferenceRequest.isOnline"
                         },
                         "required" : {
                           "type" : "constant",
@@ -786,7 +786,7 @@
                         },
                         "type" : {
                           "type" : "constant",
-                          "value" : "text"
+                          "value" : "number"
                         },
                         "min" : {
                           "type" : "constant"

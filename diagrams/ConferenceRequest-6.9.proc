@@ -60,8 +60,8 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_lh7YI3VQEey5Lta1x5FHVg" name="conferenceRequest" content="conferenceRequest" type="TYPE_VARIABLE" returnType="com.company.model.ConferenceRequest">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_lh7YJHVQEey5Lta1x5FHVg" name="conferenceRequest" dataType="_wOeoBHUwEey-uZYfpqG2oA" className="com.company.model.ConferenceRequest"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_lh7YJXVQEey5Lta1x5FHVg" name="conferenceRequestInput.eventDate" content="conferenceRequestInput?.eventDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_lh7YJnVQEey5Lta1x5FHVg" name="conferenceRequestInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_lh7YJXVQEey5Lta1x5FHVg" name="newScript()" content="return conferenceRequestInput?.eventDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_iVaicIG2Eeydbc0axSTiyQ" name="conferenceRequestInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_lh7YJ3VQEey5Lta1x5FHVg" type="JAVA_METHOD" expression="setEventDate">
               <inputTypes>java.time.LocalDate</inputTypes>
@@ -126,6 +126,9 @@
               <inputs xmi:type="process:ContractInput" xmi:id="_lh7YB3VQEey5Lta1x5FHVg" name="approved" type="BOOLEAN" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_lh7YCHVQEey5Lta1x5FHVg" name="explanation" createMode="false"/>
             </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_cO8XoIGvEeydbc0axSTiyQ" expression="import java.time.LocalDateTime&#xD;&#xA;import java.time.LocalDate&#xD;&#xA;&#xD;&#xA;def todayDate = LocalDateTime.now();&#xD;&#xA;def today = LocalDate.now();&#xD;&#xA;&#xD;&#xA;if (conferenceRequestInput.eventDate &lt; today){&#xD;&#xA;&#x9;return false;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return true;" errorMessage="Event date needs to be in the future." name="checkDate">
+              <inputNames>conferenceRequestInput</inputNames>
+            </constraints>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_cubiFXVQEey5Lta1x5FHVg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
@@ -637,8 +640,8 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_vtL3uXU7Eey2JLUaVZr_Yg" name="conferenceRequest" content="conferenceRequest" type="TYPE_VARIABLE" returnType="com.company.model.ConferenceRequest">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vtL3unU7Eey2JLUaVZr_Yg" name="conferenceRequest" dataType="_wOeoBHUwEey-uZYfpqG2oA" className="com.company.model.ConferenceRequest"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_vtL3u3U7Eey2JLUaVZr_Yg" name="conferenceRequestInput.eventDate" content="conferenceRequestInput?.eventDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_vtL3vHU7Eey2JLUaVZr_Yg" name="conferenceRequestInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vtL3u3U7Eey2JLUaVZr_Yg" name="newScript()" content="conferenceRequestInput?.eventDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_VJc3cIG2Eeydbc0axSTiyQ" name="conferenceRequestInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_vtL3vXU7Eey2JLUaVZr_Yg" type="JAVA_METHOD" expression="setEventDate">
               <inputTypes>java.time.LocalDate</inputTypes>
